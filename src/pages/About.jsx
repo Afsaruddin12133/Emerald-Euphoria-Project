@@ -1,15 +1,21 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { PageWrapper } from '@/components/shared/PageWrapper';
+import { Badge, Button, Card } from '@/components/ui';
 import {
-  Heart, Target, Lightbulb, Users, Globe, Shield,
-  ArrowRight, Github, Twitter, Linkedin, Sparkles
-} from 'lucide-react'
-import { Button, Badge, Card } from '@/components/ui'
-import { PageWrapper } from '@/components/shared/PageWrapper'
+    fadeInUp,
+    revealUp,
+    scaleIn,
+    staggerContainer
+} from '@/lib/animations';
+import { motion } from 'framer-motion';
 import {
-  fadeInUp, fadeInLeft, fadeInRight, revealUp,
-  staggerContainer, scaleIn
-} from '@/lib/animations'
+    ArrowRight,
+    Globe,
+    Heart,
+    Lightbulb,
+    Shield,
+    Sparkles,
+    Target
+} from 'lucide-react';
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 const VALUES = [
@@ -256,9 +262,9 @@ export default function About() {
             {/* Social links */}
             <div className="mt-12 flex justify-center gap-4">
               {[
-                { icon: Github, label: 'GitHub' },
-                { icon: Twitter, label: 'Twitter' },
-                { icon: Linkedin, label: 'LinkedIn' },
+                { icon: Globe, label: 'GitHub' },
+                { icon: Sparkles, label: 'Twitter' },
+                { icon: Shield, label: 'LinkedIn' },
               ].map((s) => (
                 <button
                   key={s.label}
