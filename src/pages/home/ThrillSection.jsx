@@ -17,54 +17,92 @@ export default function ThrillSection() {
     return (
         <section className="w-full relative py-12">
             <div className="container-custom">
-                <div className="text-center mb-6">
+                <div className="text-center mb-[80px]">
                     <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
-                        Discover The Thrill
+                        <span className="text-white">Discover The </span>
+                        <span className="text-[#68E203]">Thrill</span>
                     </h2>
                 </div>
 
-                <div className="w-full h-[314px] flex items-start justify-center">
-                    <div className="w-full max-w-[1280px] mx-auto h-full" style={{ height: 314 }}>
-                        <div className="w-full h-full rounded-[20px] relative overflow-hidden" style={{ background: 'var(--Shade-02, #051711)', border: '1px solid var(--Shade-03, #0F211B)' }}>
-                            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#051711] to-transparent z-10 pointer-events-none rounded-l-[20px]" />
-                            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#051711] to-transparent z-10 pointer-events-none rounded-r-[20px]" />
-
-                            <div className="relative w-full h-full flex items-center py-6">
-                                <div className="hidden md:grid grid-cols-4 gap-x-8 md:gap-x-[80px] items-stretch h-full w-full">
-                                    {cards.map((c, i) => (
-                                        <motion.div key={c.title} className="w-full h-[190px]" initial={{ opacity: 0, y: 18, scale: 0.98 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} whileHover={{ scale: 1.03 }} viewport={{ once: true }} transition={{ type: 'spring', stiffness: 140, damping: 18, duration: 0.6, delay: i * 0.08 }}>
-                                            <div className="rounded-[25px] border overflow-hidden relative h-full" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}>
-                                                <div className="absolute inset-0" style={{ background: c.bg, mixBlendMode: 'overlay', opacity: 0.12 }} />
-                                                <div className="absolute top-[18px] left-[24px]" style={{ width: 176 }}>
-                                                    <div className="text-white font-['Montserrat'] font-bold text-[26px] leading-[100%]" style={{ letterSpacing: '-0.02em' }}>{c.title}</div>
-                                                </div>
-                                                <button aria-label={`Go to ${c.title}`} className="absolute left-[24px] bottom-[16px] w-[44px] h-[44px] rounded-[12px] flex items-center justify-center bg-[var(--Shade-04,#192B25)] border border-[rgba(255,255,255,0.02)]">
-                                                    <ArrowRight size={20} />
-                                                </button>
-                                                <motion.img src={c.img} alt="icon" className="absolute" style={{ width: 160, height: 160, right: 12, top: 15, transform: 'rotate(-15deg)' }} initial={{ y: -6 }} animate={{ y: 6 }} transition={{ y: { duration: 2, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' } }} />
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-
-                                <div className="md:hidden w-full h-full flex items-center overflow-x-auto gap-4 px-4 no-scrollbar" style={{ whiteSpace: 'nowrap' }}>
-                                    {cards.map((c, i) => (
-                                        <motion.div key={c.title} className="flex-shrink-0 w-[220px] h-[190px] snap-start" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}>
-                                            <div className="rounded-[25px] border overflow-hidden relative h-full" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}>
-                                                <div className="absolute inset-0" style={{ background: c.bg, mixBlendMode: 'overlay', opacity: 0.12 }} />
-                                                <div className="absolute top-[18px] left-[16px]" style={{ width: 140 }}>
-                                                    <div className="text-white font-['Montserrat'] font-bold text-[22px] leading-[100%]" style={{ letterSpacing: '-0.02em' }}>{c.title}</div>
-                                                </div>
-                                                <button aria-label={`Go to ${c.title}`} className="absolute left-[16px] bottom-[12px] w-[44px] h-[44px] rounded-[12px] flex items-center justify-center bg-[var(--Shade-04,#192B25)] border border-[rgba(255,255,255,0.02)]">
-                                                    <ArrowRight size={18} />
-                                                </button>
-                                                <motion.img src={c.img} alt="icon" className="absolute" style={{ width: 140, height: 140, right: 8, top: 12, transform: 'rotate(-15deg)' }} initial={{ y: -4 }} animate={{ y: 4 }} transition={{ y: { duration: 2, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' } }} />
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
+                <div className="w-full flex items-start justify-center">
+                    <div className="w-full max-w-[1280px] mx-auto">
+                        
+                        {/* Desktop View */}
+                        <div className="hidden md:grid grid-cols-4 gap-[20px] items-stretch w-full">
+                            {cards.map((c, i) => (
+                                <motion.div 
+                                    key={c.title} 
+                                    className="w-full h-[180px] cursor-pointer"
+                                    initial={{ opacity: 0, y: 18, scale: 0.98 }} 
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+                                    whileHover={{ scale: 1.03 }} 
+                                    viewport={{ once: true }} 
+                                    transition={{ type: 'spring', stiffness: 140, damping: 18, duration: 0.6, delay: i * 0.08 }}
+                                >
+                                    <div className="rounded-[25px] overflow-hidden relative w-full h-full" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}>
+                                        {/* Corner Lighting Effect */}
+                                        <div className="absolute right-0 top-0 w-[180px] h-[180px] pointer-events-none" style={{ background: c.bg, opacity: 0.8, maskImage: 'radial-gradient(circle at top right, black 0%, transparent 70%)', WebkitMaskImage: 'radial-gradient(circle at top right, black 0%, transparent 70%)' }} />
+                                        
+                                        <div className="absolute top-[30px] left-[30px]" style={{ width: 176 }}>
+                                            <div className="text-[#FFFFFF] font-['Montserrat']  text-[22px] leading-[100%]" style={{ letterSpacing: '-0.02em' }}>{c.title}</div>
+                                        </div>
+                                        
+                                        <button aria-label={`Go to ${c.title}`} className="absolute cursor-pointer top-[116px] left-[30px] w-[44px] h-[44px] rounded-[12px] flex items-center justify-center border-t border-[rgba(255,255,255,0.02)]" style={{ background: 'var(--Shade-04, #192B25)' }}>
+                                            <ArrowRight size={20} color="#FFFFFF" />
+                                        </button>
+                                        
+                                        <motion.img 
+                                            src={c.img} 
+                                            alt="icon" 
+                                            className="absolute pointer-events-none" 
+                                            style={{ width: 155, height: 165, left: 118.59, top: 50, transform: 'rotate(-15deg)' }} 
+                                            initial={{ y: -6 }} 
+                                            animate={{ y: 6 }} 
+                                            transition={{ y: { duration: 2, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' } }} 
+                                        />
+                                    </div>
+                                </motion.div>
+                            ))}
                         </div>
+
+                        {/* Mobile View */}
+                        <div className="md:hidden w-full flex items-center overflow-x-auto gap-[20px] no-scrollbar pb-4" style={{ whiteSpace: 'nowrap' }}>
+                            {cards.map((c, i) => (
+                                <motion.div 
+                                    key={c.title} 
+                                    className="flex-shrink-0 snap-start" 
+                                    style={{ width: 305, height: 190 }}
+                                    initial={{ opacity: 0, y: 18 }} 
+                                    whileInView={{ opacity: 1, y: 0 }} 
+                                    viewport={{ once: true }} 
+                                    transition={{ delay: i * 0.06 }}
+                                >
+                                    <div className="rounded-[25px] overflow-hidden relative w-full h-full" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}>
+                                        {/* Corner Lighting Effect */}
+                                        <div className="absolute right-0 top-0 w-[180px] h-[180px] pointer-events-none" style={{ background: c.bg, opacity: 0.8, maskImage: 'radial-gradient(circle at top right, black 0%, transparent 70%)', WebkitMaskImage: 'radial-gradient(circle at top right, black 0%, transparent 70%)' }} />
+                                        
+                                        <div className="absolute top-[30px] left-[30px]" style={{ width: 176 }}>
+                                            <div className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[26px] leading-[100%]" style={{ letterSpacing: '-0.02em' }}>{c.title}</div>
+                                        </div>
+                                        
+                                        <button aria-label={`Go to ${c.title}`} className="absolute top-[116px] left-[30px] w-[44px] h-[44px] rounded-[12px] flex items-center justify-center border-t border-[rgba(255,255,255,0.02)]" style={{ background: 'var(--Shade-04, #192B25)' }}>
+                                            <ArrowRight size={20} color="#FFFFFF" />
+                                        </button>
+                                        
+                                        <motion.img 
+                                            src={c.img} 
+                                            alt="icon" 
+                                            className="absolute pointer-events-none" 
+                                            style={{ width: 160, height: 160, left: 118.59, top: 33, transform: 'rotate(-15deg)' }} 
+                                            initial={{ y: -4 }} 
+                                            animate={{ y: 4 }} 
+                                            transition={{ y: { duration: 2, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' } }} 
+                                        />
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+
                     </div>
                 </div>
             </div>
