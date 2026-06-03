@@ -17,34 +17,39 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-[10px] lg:top-[20px] left-1/2 -translate-x-1/2 z-50 w-full max-w-[1440px] px-4 lg:px-0">
-      <nav className="relative flex h-[64px] lg:h-[84px] w-full items-center pl-4 pr-4 lg:pl-[220px] lg:pr-[15px] bg-[#FFFFFF0A] backdrop-blur-[20px] rounded-[16px]">
-        
-        {/* Logo */}
-        <Link 
-          to="/" 
-          className="absolute lg:left-[80px] left-4 lg:top-[10px] top-1/2 -translate-y-1/2 lg:translate-y-0 w-[80px] h-[60px] lg:w-[120px] lg:h-[92px] shrink-0 z-10"
+    <header className="fixed top-[10px] lg:top-[20px] left-0 right-0 z-50 w-full pointer-events-none">
+      
+      {/* Nav Background and CTAs */}
+      <div className="mx-auto w-full max-w-[1440px] px-4 lg:px-4 pointer-events-auto">
+        <nav className="relative flex h-[60px] lg:h-[80px] w-full items-center pr-4 lg:pr-[15px] bg-[#FFFFFF0A] backdrop-blur-[20px] rounded-[16px]">
+          {/* Auth CTAs */}
+          <div className="flex items-center gap-2 lg:gap-[10px] shrink-0 ml-auto z-10">
+            <button
+              onClick={() => openAuth('signin')}
+              className="flex cursor-pointer items-center justify-center w-[70px] lg:w-[101px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-[#FFFFFF33] hover:bg-[#FFFFFF4D] text-white font-medium text-xs lg:text-sm transition-colors"
+            >
+              Log In
+            </button>
+            <button
+              onClick={() => openAuth('signup')}
+              className="flex cursor-pointer items-center justify-center w-[90px] lg:w-[118px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-medium text-xs lg:text-sm hover:opacity-90 transition-opacity"
+            >
+              Register
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      {/* Invisible Container for Logo Alignment */}
+      <div className="container-custom absolute top-0 left-0 right-0 bottom-0 mx-auto pointer-events-none">
+        <Link
+          to="/"
+          className="absolute left-[24px] md:left-[32px] lg:top-[10px] top-1/2 -translate-y-1/2 lg:translate-y-0 w-[80px] h-[60px] lg:w-[120px] lg:h-[92px] shrink-0 z-10 pointer-events-auto"
         >
           <img src={logoImg} alt="Emerald Euphoria" className="w-full h-full object-contain" />
         </Link>
+      </div>
 
-        {/* Auth CTAs */}
-        <div className="flex items-center gap-2 lg:gap-[10px] shrink-0 ml-auto z-10">
-          <button 
-            onClick={() => openAuth('signin')}
-            className="flex items-center justify-center w-[70px] lg:w-[101px] h-[40px] lg:h-[54px] rounded-[10px] lg:rounded-[13px] bg-[#FFFFFF33] hover:bg-[#FFFFFF4D] text-white font-medium text-xs lg:text-sm transition-colors"
-          >
-            Log In
-          </button>
-          <button 
-            onClick={() => openAuth('signup')}
-            className="flex items-center justify-center w-[90px] lg:w-[118px] h-[40px] lg:h-[54px] rounded-[10px] lg:rounded-[13px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-medium text-xs lg:text-sm hover:opacity-90 transition-opacity"
-          >
-            Register
-          </button>
-        </div>
-
-      </nav>
       <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} initialMode={authMode} />
     </header>
   )

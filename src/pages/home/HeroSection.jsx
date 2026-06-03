@@ -32,24 +32,31 @@ export default function HeroSection() {
                         animate="visible"
                         variants={staggerContainer(0.1, 0.1)}
                     >
-                        <motion.div variants={fadeInUp} className="mb-6">
+                        <motion.div variants={fadeInUp} className="mb-6 mt-6">
                             <h1
-                                className="font-['Montserrat'] font-black uppercase text-[40px] sm:text-[55px] lg:text-[70px] leading-[0.9] tracking-[-0.03em] text-white"
+                                className="font-['Montserrat'] font-black font-extrabold uppercase text-[40px] sm:text-[55px] lg:text-[70px] leading-[0.9] tracking-[-0.03em] text-white"
+                                style={{
+                                    textShadow: "2px 0 0 currentColor, -1px 0 0 currentColor"
+                                }}
                             >
-                                Welcome to
+                                Welcome  <span className='pl-2'>to</span>
                                 <br />
                                 <span
-                                    className="text-transparent bg-clip-text filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] whitespace-nowrap"
-                                    style={{ backgroundImage: 'linear-gradient(180deg, #68E203 10%, #C6FF94 40%, #68E203 50%, #C6FF94 60%, #68E203 100%)' }}
+                                    className="text-transparent bg-clip-text whitespace-nowrap
+             drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] tracking-[-0.06em]"
+                                    style={{
+                                        backgroundImage:
+                                            'linear-gradient(180deg, #68E203 10%, #C6FF94 40%, #68E203 50%, #C6FF94 60%, #68E203 100%)',
+                                    }}
                                 >
-                                    Emerald Euphoria
+                                    Emerald <span className="pl-2">Euphoria</span>
                                 </span>
                             </h1>
                         </motion.div>
 
                         <motion.p
                             variants={fadeInUp}
-                            className="font-['Montserrat'] font-bold text-[16px] sm:text-[18px] text-[#556761] leading-none tracking-normal max-w-[550px] mb-8"
+                            className="font-['Montserrat'] font-medium  text-[16px] sm:text-[18px] text-[#556761] leading-none tracking-normal max-w-[550px] mb-8"
                         >
                             Your favorite gameroom for slots, fish games and keno.
                             Enjoy more than 15 Platforms at one place and
@@ -58,11 +65,11 @@ export default function HeroSection() {
                         </motion.p>
 
                         <motion.div variants={fadeInUp} className="mb-8 w-full flex flex-col items-center lg:items-start">
-                            <h2 className="text-white font-bold text-2xl mb-4">Register & Claim</h2>
+                            <h2 className="text-white  text-2xl mb-4">Register & Claim</h2>
 
                             <div className="flex items-center justify-center lg:justify-start gap-1 sm:gap-[10px] w-full max-w-[405px] h-[48px] scale-[0.85] sm:scale-100 origin-center lg:origin-left">
                                 <div className="relative flex items-center bg-[#0B120F] rounded-[12px] w-[175px] h-[48px] pl-[15px] bg-[#0F211B]">
-                                    <span className="text-white font-bold text-[15px] font-['Montserrat'] whitespace-nowrap z-10">100% Sign Up  </span>
+                                    <span className="text-white text-[15px] font-['Montserrat'] whitespace-nowrap z-10">100% Sign Up  </span>
                                     <img
                                         src={gemesBoxImg}
                                         alt="Games Box"
@@ -74,7 +81,7 @@ export default function HeroSection() {
                                 <span className="text-white font-bold text-3xl sm:pl-4 leading-none mt-[-4px] z-10">+</span>
 
                                 <div className="relative flex items-center bg-[#0B120F] rounded-[12px] w-[189px] h-[48px] pl-[15px] bg-[#0F211B]">
-                                    <span className="text-white font-bold text-[15px] font-['Montserrat'] whitespace-nowrap z-10 ">20% All Deposit</span>
+                                    <span className="text-white  text-[15px] font-['Montserrat'] whitespace-nowrap z-10 ">20% All Deposit</span>
                                     <img
                                         src={circalImg}
                                         alt="Clover"

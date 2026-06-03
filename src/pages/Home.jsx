@@ -16,8 +16,8 @@ export default function Home() {
             <HeroSection />
             <RecentWinsSection />
             <ThrillSection />
-            <ChooseUsSection />
             <TrustedPlatformsSection />
+            <ChooseUsSection />
             <HowToPlaySection />
             <TestimonialSection />
             <EarnRewardsSection />
