@@ -168,7 +168,7 @@ function SmoothMarquee({ items }) {
                         <img 
                             src={img} 
                             alt="Platform" 
-                            className="w-full h-full object-cover select-none pointer-events-none" 
+                            className=" object-cover select-none pointer-events-none h-full" 
                         />
                     </div>
                 ))}

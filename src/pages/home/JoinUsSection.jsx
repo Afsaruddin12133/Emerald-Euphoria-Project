@@ -78,7 +78,7 @@ export default function JoinUsSection() {
                     {/* Right Side Mascot & Assets */}
                     <div className="relative w-full lg:w-auto flex justify-center items-center pointer-events-none mt-10 lg:mt-0 lg:static">
                         {/* Glow Background */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] md:w-[120%] lg:w-[1000px] lg:left-[800px] lg:top-[50%] h-auto aspect-square z-0 mix-blend-screen opacity-90">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] md:w-[20%] lg:w-[100px] lg:left-[800px] lg:top-[50%] h-auto aspect-square z-0 mix-blend-screen opacity-90">
                              <img src={glowImg} alt="Glow Effect" className="w-full h-full object-contain" />
                         </div>
                         

@@ -7,29 +7,29 @@ import rewardImg from '@/assets/Reward probabiliry.png';
 
 export default function ChooseUsSection() {
     const cards = [
-        { 
-            title: 'Safe & Secure', 
-            desc: 'Your safety and security\ncome first.', 
+        {
+            title: 'Safe & Secure',
+            desc: 'Your safety and security\ncome first.',
             img: securityShieldImg,
-            glow: 'rgba(68, 136, 255, 0.3)'
+            bgTop: 'rgba(42, 94, 201, 0.4)'
         },
-        { 
-            title: '24/7 Support', 
-            desc: 'Fast, friendly, and reliable\nsupport 24/7.', 
+        {
+            title: '24/7 Support',
+            desc: 'Fast, friendly, and reliable\nsupport 24/7.',
             img: headphoneImg,
-            glow: 'rgba(130, 9, 206, 0.3)'
+            bgTop: 'rgba(107, 33, 168, 0.4)'
         },
-        { 
-            title: 'Same day\nRedemption', 
-            desc: 'Redeem your winnings\nfaster.', 
+        {
+            title: 'Same day\nRedemption',
+            desc: 'Redeem your winnings\nfaster.',
             img: cashMoneyImg,
-            glow: 'rgba(0, 214, 50, 0.25)'
+            bgTop: 'rgba(4, 120, 87, 0.4)'
         },
-        { 
-            title: 'VIP Club', 
-            desc: 'Enjoy exclusive\nmember benefits.', 
+        {
+            title: 'VIP Club',
+            desc: 'Enjoy exclusive\nmember benefits.',
             img: rewardImg,
-            glow: 'rgba(240, 7, 44, 0.3)'
+            bgTop: 'rgba(185, 28, 28, 0.4)'
         },
     ]
 
@@ -46,37 +46,39 @@ export default function ChooseUsSection() {
 
                 <div className="w-full flex items-start justify-center">
                     <div className="w-full max-w-[1280px] mx-auto">
-                        
+
                         {/* Desktop View */}
                         <div className="hidden md:grid grid-cols-4 gap-[20px] items-stretch w-full cursor-pointer">
                             {cards.map((c, i) => (
-                                <motion.div 
-                                    key={c.title} 
-                                    className="w-full h-[222px]"
-                                    initial={{ opacity: 0, y: 18, scale: 0.98 }} 
-                                    whileInView={{ opacity: 1, y: 0, scale: 1 }} 
-                                    whileHover={{ scale: 1.03 }} 
-                                    viewport={{ once: true }} 
+                                <motion.div
+                                    key={c.title}
+                                    className="w-full h-full"
+                                    initial={{ opacity: 0, y: 18, scale: 0.98 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    whileHover={{ scale: 1.03 }}
+                                    viewport={{ once: true }}
                                     transition={{ type: 'spring', stiffness: 140, damping: 18, duration: 0.6, delay: i * 0.08 }}
                                 >
-                                    <div className="rounded-[25px] relative w-full h-full flex flex-col items-center text-center px-4 pb-8" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}>
-                                        {/* Glow Effect */}
-                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-[200px] pointer-events-none rounded-full" style={{ background: c.glow, filter: 'blur(60px)', opacity: 0.8 }} />
-                                        
-                                        <motion.img 
-                                            src={c.img} 
-                                            alt={c.title} 
-                                            className="absolute pointer-events-none" 
-                                            style={{ width: 170, height: 170, left: 53, top: -90, filter: 'drop-shadow(0px 4px 40px rgba(0,0,0,0.25))' }} 
-                                            initial={{ y: -6 }} 
-                                            animate={{ y: 6 }} 
-                                            transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }} 
+                                    <div className="rounded-[25px] relative w-full h-full flex flex-col items-center text-center px-4 pb-8 " style={{ border: '1px solid var(--Shade-03, #0F211B)', background: `linear-gradient(180deg, ${c.bgTop} 0%, var(--Shade-02, #051711) 60%)` }}>
+                                        {/* Glowing Circle behind Icon */}
+                                        <div className="absolute pointer-events-none" style={{ left: 53, top: -90, width: 150, height: 150 }}>
+                                            <div className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px] rounded-full" style={{ background: c.bgTop.replace('0.4', '0.9'), filter: 'blur(20px)', opacity: 1 }} />
+                                        </div>
+
+                                        <motion.img
+                                            src={c.img}
+                                            alt={c.title}
+                                            className="absolute pointer-events-none"
+                                            style={{ width: 150, height: 150, left: 53, top: -90, filter: 'drop-shadow(0px 0px 40px rgba(0,0,0,0.25))' }}
+                                            initial={{ y: -6 }}
+                                            animate={{ y: 6 }}
+                                            transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }}
                                         />
-                                        
+
                                         {/* Content pushed down to make room for the protruding icon */}
-                                        <div className="mt-[110px] flex-1 flex flex-col items-center justify-start relative z-10">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[22px] leading-[1.2] mb-[10px] whitespace-pre-line">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] font-medium text-[14px] leading-[1.4] whitespace-pre-line">{c.desc}</p>
+                                        <div className="mt-[110px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[22px] leading-[1.2] mb-[10px] h-[55px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] text-[14px] leading-[1.4] whitespace-pre-line px-2 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -84,34 +86,35 @@ export default function ChooseUsSection() {
                         </div>
 
                         {/* Mobile View */}
-                        <div className="md:hidden w-full flex items-center overflow-x-auto gap-[20px] no-scrollbar pb-8 pt-[100px] px-4 -mx-4" style={{ whiteSpace: 'normal' }}>
+                        <div className="md:hidden w-full grid grid-cols-2 gap-x-3 gap-y-[70px] sm:gap-x-4 sm:gap-y-[70px] pt-[70px] pb-12">
                             {cards.map((c, i) => (
-                                <motion.div 
-                                    key={c.title} 
-                                    className="flex-shrink-0 snap-center" 
-                                    style={{ width: 305, height: 222 }}
-                                    initial={{ opacity: 0, y: 18 }} 
-                                    whileInView={{ opacity: 1, y: 0 }} 
-                                    viewport={{ once: true }} 
+                                <motion.div
+                                    key={c.title}
+                                    className="w-full h-full"
+                                    initial={{ opacity: 0, y: 18 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ delay: i * 0.06 }}
                                 >
-                                    <div className="rounded-[25px] relative w-full h-full flex flex-col items-center text-center px-4 pb-8" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}>
-                                        {/* Glow Effect */}
-                                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-[200px] pointer-events-none rounded-full" style={{ background: c.glow, filter: 'blur(60px)', opacity: 0.8 }} />
-                                        
-                                        <motion.img 
-                                            src={c.img} 
-                                            alt={c.title} 
-                                            className="absolute pointer-events-none" 
-                                            style={{ width: 200, height: 200, left: 53, top: -100, filter: 'drop-shadow(0px 4px 40px rgba(0,0,0,0.25))' }} 
-                                            initial={{ y: -4 }} 
-                                            animate={{ y: 4 }} 
-                                            transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }} 
+                                    <div className="rounded-[20px] relative w-full h-full min-h-[180px] flex flex-col items-center text-center px-2 pb-4 " style={{ border: '1px solid var(--Shade-03, #0F211B)', background: `linear-gradient(180deg, ${c.bgTop} 0%, var(--Shade-02, #051711) 60%)` }}>
+                                        {/* Glowing Circle behind Icon */}
+                                        <div className="absolute pointer-events-none left-1/2 -translate-x-1/2" style={{ top: -45, width: 80, height: 80 }}>
+                                            <div className="absolute top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full" style={{ background: c.bgTop.replace('0.4', '0.9'), filter: 'blur(15px)', opacity: 1 }} />
+                                        </div>
+
+                                        <motion.img
+                                            src={c.img}
+                                            alt={c.title}
+                                            className="absolute pointer-events-none left-1/2 -translate-x-1/2"
+                                            style={{ width: 80, height: 80, top: -45, filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' }}
+                                            initial={{ y: -4 }}
+                                            animate={{ y: 4 }}
+                                            transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }}
                                         />
-                                        
-                                        <div className="mt-[110px] flex-1 flex flex-col items-center justify-start relative z-10">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[22px] leading-[1.2] mb-[10px] whitespace-pre-line">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] font-medium text-[14px] leading-[1.4] whitespace-pre-line">{c.desc}</p>
+
+                                        <div className="mt-[65px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[15px] sm:text-[18px] leading-[1.2] mb-[6px] h-[45px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] font-medium text-[11px] sm:text-[13px] leading-[1.4] whitespace-pre-line px-1 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>

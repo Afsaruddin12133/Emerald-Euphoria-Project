@@ -84,7 +84,7 @@ export default function FaqSection() {
                 </div>
 
                 {/* FAQ List */}
-                <div className="w-full max-w-[1000px] mx-auto flex flex-col gap-[16px]">
+                <div className="w-full flex flex-col gap-[16px]">
                     {FAQS.map((faq, index) => (
                         <FaqItem 
                             key={index} 

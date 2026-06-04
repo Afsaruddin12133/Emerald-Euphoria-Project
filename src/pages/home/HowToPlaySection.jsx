@@ -5,9 +5,9 @@ import mascotImg from '@/assets/muscot123.png';
 // Games
 import goldenDragonImg from '@/assets/goldendragron.png';
 import orionStarsImg from '@/assets/orionstrars.png';
-import fishImg from '@/assets/Fish.png';
+import firekirinImg from '@/assets/firekirin.png';
+import gameVaultAltImg from '@/assets/game vault.png';
 import juwaImg from '@/assets/juwa.png';
-import gameVaultImg from '@/assets/gamming.png';
 import milkyWaysImg from '@/assets/milkyways.png';
 import ultraPandaImg from '@/assets/ultrapanda.png';
 import riverSweepsImg from '@/assets/riversweeps.png';
@@ -27,9 +27,9 @@ import cloverImg from '@/assets/lucky.png'; // Fallback if it's not the exact cl
 const GAMES = [
     goldenDragonImg,
     orionStarsImg,
-    fishImg,
+    firekirinImg,
     juwaImg,
-    gameVaultImg,
+    gameVaultAltImg,
     milkyWaysImg,
     ultraPandaImg,
     riverSweepsImg
@@ -67,7 +67,7 @@ function ClaimButton() {
                 padding: '19px 25px'
             }}
         >
-            <span className="flex items-center justify-center leading-none h-full mt-[-2px]">
+            <span className="flex cursor-pointer items-center justify-center h-full mt-[-2px]">
                 Claim Now
             </span>
         </button>
@@ -101,7 +101,11 @@ export default function HowToPlaySection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            style={{ mixBlendMode: 'lighten' }}
+                            style={{ 
+                                mixBlendMode: 'lighten',
+                                WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
+                                maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)'
+                            }}
                         />
                     </div>
 
@@ -112,16 +116,16 @@ export default function HowToPlaySection() {
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Register & claim</h3>
-                                <p className="text-[#556761] font-['Montserrat'] font-medium text-[14px] mb-[24px]">Sign Up today & unlock instant rewards.</p>
+                                <p className="text-[#556761] font-['Montserrat'] text-[14px] mb-[24px]">Sign Up today & unlock instant rewards.</p>
                                 
                                 <div className="flex items-center gap-[10px] w-full mb-[24px]">
                                     <div className="flex-1 h-[54px] rounded-[12px] bg-[#0F211B] flex items-center justify-between px-4">
-                                        <span className="text-white font-['Montserrat'] font-semibold text-[14px]">100% Sign Up</span>
+                                        <span className="text-white font-['Montserrat']  text-[14px]">100% Sign Up</span>
                                         <img src={chestImg} alt="Chest" className="h-[40px] object-contain" />
                                     </div>
                                     <span className="text-white font-bold text-[24px]">+</span>
                                     <div className="flex-1 h-[54px] rounded-[12px] bg-[#0F211B] flex items-center justify-between px-4">
-                                        <span className="text-white font-['Montserrat'] font-semibold text-[14px]">20% All Deposit</span>
+                                        <span className="text-white font-['Montserrat']  text-[14px]">20% All Deposit</span>
                                         <img src={cloverImg} alt="Clover" className="h-[40px] object-contain" />
                                     </div>
                                 </div>
@@ -134,7 +138,7 @@ export default function HowToPlaySection() {
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Play your favorite games</h3>
-                                <p className="text-[#556761] font-['Montserrat'] font-medium text-[14px] mb-[24px]">Unlimited fun with top casino games.</p>
+                                <p className="text-[#556761] font-['Montserrat']  text-[14px] mb-[24px]">Unlimited fun with top casino games.</p>
                                 
                                 <div className="grid grid-cols-4 gap-[20px] mb-[24px]">
                                     {GAMES.map((img, idx) => (
@@ -159,7 +163,9 @@ export default function HowToPlaySection() {
                                         <div 
                                             key={idx} 
                                             className="w-full h-[120px] rounded-[15px] flex items-center justify-center p-4 transition-transform hover:scale-105"
-                                            style={{ background: 'var(--Shade-03, #0F211B)' }}
+                                            style={{ 
+                                                background: 'radial-gradient(50% 80% at 50% 0%, rgba(255,255,255,0.12) 0%, var(--Shade-03, #0F211B) 100%)'
+                                            }}
                                         >
                                             <img src={img} alt="Payment" className="max-w-[80%] max-h-[60%] object-contain opacity-90" />
                                         </div>

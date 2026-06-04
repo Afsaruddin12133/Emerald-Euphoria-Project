@@ -13,7 +13,7 @@ import trollyImg from '@/assets/magnific trolly.png';
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full overflow-hidden pt-32 pb-20 min-h-screen flex items-center" id="hero">
+        <section className="relative w-full overflow-hidden pt-32 pb-20 h-[1100px] lg:h-auto lg:min-h-screen flex items-start lg:items-center" id="hero">
             {/* Background Image */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -32,14 +32,14 @@ export default function HeroSection() {
                         animate="visible"
                         variants={staggerContainer(0.1, 0.1)}
                     >
-                        <motion.div variants={fadeInUp} className="mb-6 mt-6">
+                        <motion.div variants={fadeInUp} className="mb-6 mt-[-10px] lg:mt-6">
                             <h1
                                 className="font-['Montserrat'] font-black font-extrabold uppercase text-[40px] sm:text-[55px] lg:text-[70px] leading-[0.9] tracking-[-0.03em] text-white"
                                 style={{
                                     textShadow: "2px 0 0 currentColor, -1px 0 0 currentColor"
                                 }}
                             >
-                                Welcome  <span className='pl-2'>to</span>
+                                <span className='text-[26px] sm:text-[55px] lg:text-[70px] leading-[0.5] tracking-[-0.03em]'> Welcome  <span className='pl-2'>to</span></span>
                                 <br />
                                 <span
                                     className="text-transparent bg-clip-text whitespace-nowrap
@@ -49,14 +49,14 @@ export default function HeroSection() {
                                             'linear-gradient(180deg, #68E203 10%, #C6FF94 40%, #68E203 50%, #C6FF94 60%, #68E203 100%)',
                                     }}
                                 >
-                                    Emerald <span className="pl-2">Euphoria</span>
+                                    Emerald <br className="block lg:hidden" /> <span className="pl-2 lg:pl-0">Euphoria</span>
                                 </span>
                             </h1>
                         </motion.div>
 
                         <motion.p
                             variants={fadeInUp}
-                            className="font-['Montserrat'] font-medium  text-[16px] sm:text-[18px] text-[#556761] leading-none tracking-normal max-w-[550px] mb-8"
+                            className="font-['Montserrat'] font-medium mt-[-8px] text-[16px] sm:text-[18px] text-[#556761] leading-none tracking-normal max-w-[550px] mb-8"
                         >
                             Your favorite gameroom for slots, fish games and keno.
                             Enjoy more than 15 Platforms at one place and
@@ -65,27 +65,27 @@ export default function HeroSection() {
                         </motion.p>
 
                         <motion.div variants={fadeInUp} className="mb-8 w-full flex flex-col items-center lg:items-start">
-                            <h2 className="text-white  text-2xl mb-4">Register & Claim</h2>
+                            <h2 className="text-white font-['Montserrat'] font-bold text-2xl mb-4">Register & Claim</h2>
 
-                            <div className="flex items-center justify-center lg:justify-start gap-1 sm:gap-[10px] w-full max-w-[405px] h-[48px] scale-[0.85] sm:scale-100 origin-center lg:origin-left">
-                                <div className="relative flex items-center bg-[#0B120F] rounded-[12px] w-[175px] h-[48px] pl-[15px] bg-[#0F211B]">
-                                    <span className="text-white text-[15px] font-['Montserrat'] whitespace-nowrap z-10">100% Sign Up  </span>
+                            <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-[10px] w-full max-w-[405px] mt-2">
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-[145px] sm:w-[175px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
+                                    <span className="text-white text-[12px] sm:text-[15px] font-['Montserrat'] font-bold whitespace-nowrap z-10">100% Sign Up</span>
                                     <img
                                         src={gemesBoxImg}
                                         alt="Games Box"
-                                        className="absolute w-[64px] h-[64px] top-[-8px] left-[125px] z-20"
+                                        className="absolute w-[54px] h-[54px] sm:w-[64px] sm:h-[64px] right-[-15px] sm:right-[-20px] top-1/2 -translate-y-1/2 z-20"
                                         style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.25))' }}
                                     />
                                 </div>
 
-                                <span className="text-white font-bold text-3xl sm:pl-4 leading-none mt-[-4px] z-10">+</span>
+                                <span className="text-white font-bold text-2xl sm:text-3xl leading-none z-10 px-1 sm:px-2">+</span>
 
-                                <div className="relative flex items-center bg-[#0B120F] rounded-[12px] w-[189px] h-[48px] pl-[15px] bg-[#0F211B]">
-                                    <span className="text-white  text-[15px] font-['Montserrat'] whitespace-nowrap z-10 ">20% All Deposit</span>
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-[155px] sm:w-[189px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
+                                    <span className="text-white text-[12px] sm:text-[15px] font-['Montserrat'] font-bold whitespace-nowrap z-10">20% All Deposit</span>
                                     <img
                                         src={circalImg}
                                         alt="Clover"
-                                        className="absolute w-[64px] h-[64px] top-[-8px] left-[145px] z-20"
+                                        className="absolute w-[54px] h-[54px] sm:w-[64px] sm:h-[64px] right-[-15px] sm:right-[-20px] top-1/2 -translate-y-1/2 z-20"
                                         style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.25))' }}
                                     />
                                 </div>
@@ -129,7 +129,7 @@ export default function HeroSection() {
                             style={{
                                 width: '600px',
                                 height: '600px',
-                                top: '-150px',
+                                top: '-190px',
                                 left: '800px',
                                 background: 'radial-gradient(circle, rgba(104, 226, 3, 0.25) 0%, rgba(104, 226, 3, 0) 70%)',
                                 filter: 'blur(80px)',
@@ -141,14 +141,14 @@ export default function HeroSection() {
                         <motion.img
                             src={trollyImg}
                             alt="Magnificent Trolley"
-                            className="absolute pointer-events-auto z-10 bottom-[-40px] lg:bottom-auto left-1/2 lg:left-[290px] -translate-x-1/2 lg:translate-x-0 lg:top-[96px] w-[350px] lg:w-[920px]"
+                            className="absolute pointer-events-auto z-10 left-[75%] lg:left-[300px] -translate-x-1/2 lg:translate-x-0 lg:top-[94px] w-[750px] md:w-[650px] lg:w-[920px] top-[550px] lg:bottom-auto max-w-none"
                             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
                         />
 
                         <motion.img
                             src={mascotImg}
                             alt="Emerald Mascot"
-                            className="absolute pointer-events-auto z-20 bottom-[-40px] lg:bottom-auto left-1/2 lg:left-[700px] -translate-x-1/2 lg:translate-x-0 lg:top-[-15px] w-[280px] lg:w-[510px]"
+                            className="absolute pointer-events-auto z-20 bottom-[-10px] lg:bottom-auto left-[42%] lg:left-[710px] -translate-x-1/2 lg:translate-x-0 lg:top-[-10px] w-[320px] md:w-[420px] lg:w-[510px] top-[467px]"
                             style={{
                                 filter: 'drop-shadow(0px 40px 100px rgba(0,0,0,0.5))'
                             }}

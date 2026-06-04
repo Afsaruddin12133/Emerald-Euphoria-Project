@@ -23,7 +23,6 @@ const RECENT_WINS_DATA = [
 
 function RecentWinsMarquee() {
     const ref = useRef(null)
-    const [isInteracting, setIsInteracting] = useState(false)
 
     useEffect(() => {
         const el = ref.current
@@ -35,14 +34,12 @@ function RecentWinsMarquee() {
         let rafId
         let lastTime = performance.now()
         const speed = 40 // px per second
-        let resumeTimeout
 
         const step = (now) => {
             const dt = (now - lastTime) / 1000
             lastTime = now
-            if (!isInteracting) {
-                el.scrollLeft += speed * dt
-            }
+            
+            el.scrollLeft += speed * dt
 
             const singleWidth = content.scrollWidth / 2
             if (singleWidth > 0 && el.scrollLeft >= singleWidth) {
@@ -54,51 +51,28 @@ function RecentWinsMarquee() {
 
         rafId = requestAnimationFrame(step)
 
-        const onWheel = (e) => {
-            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                e.preventDefault()
-                el.scrollLeft += e.deltaY
-            }
-            setIsInteracting(true)
-            clearTimeout(resumeTimeout)
-            resumeTimeout = setTimeout(() => setIsInteracting(false), 1200)
-        }
-
-        const onPointerDown = () => {
-            setIsInteracting(true)
-            clearTimeout(resumeTimeout)
-        }
-        const onPointerUp = () => {
-            clearTimeout(resumeTimeout)
-            resumeTimeout = setTimeout(() => setIsInteracting(false), 1200)
-        }
-
-        el.addEventListener('wheel', onWheel, { passive: false })
-        el.addEventListener('pointerdown', onPointerDown)
-        window.addEventListener('pointerup', onPointerUp)
-
         return () => {
             cancelAnimationFrame(rafId)
-            el.removeEventListener('wheel', onWheel)
-            el.removeEventListener('pointerdown', onPointerDown)
-            window.removeEventListener('pointerup', onPointerUp)
-            clearTimeout(resumeTimeout)
         }
-    }, [isInteracting])
+    }, [])
 
     return (
         <div ref={ref} className="relative w-full overflow-x-hidden" style={{ padding: '14px' }}>
             <div className="marquee-inner flex items-center gap-6 flex-nowrap" style={{ whiteSpace: 'nowrap' }}>
                 {[...RECENT_WINS_DATA, ...RECENT_WINS_DATA].map((win, idx) => (
                     <div key={`${win.id}-${idx}`} className="flex flex-col items-center justify-center cursor-pointer group" style={{ flex: '0 0 85px', height: '138px' }}>
-                        <div className="w-[85px] h-[85px] rounded-[10px] overflow-hidden mb-[10px] transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(104,226,3,0.3)]">
-                            <img src={win.image} alt="Game" className="w-full h-full object-cover" />
+                        <div className="w-[85px] h-[85px] rounded-[10px]  mb-[10px] transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(104,226,3,0.3)]">
+                            <img src={win.image} alt="Game" className="object-cover" />
                         </div>
-                        <div className="text-[#556761] text-[12px] font-['Montserrat'] font-medium mb-[6px] group-hover:text-white transition-colors duration-300">
+                        <div className="text-[#556761] text-[12px] font-['Montserrat'] mb-[6px] group-hover:text-white transition-colors duration-300">
                             {win.user}
                         </div>
                         <div className="flex items-center gap-1.5">
-                            <img src={coinImg} alt="Coin" className="w-[14px] h-[14px] relative top-[-1px]" style={{ filter: 'drop-shadow(0px 0px 6px rgba(255, 171, 0, 0.6))' }} />
+                            <div className="relative w-[14px] h-[14px] flex items-center justify-center top-[-1px]">
+                                {/* Golden glow specifically below the coin */}
+                                <div className="absolute -bottom-[3px] w-[12px] h-[6px] bg-[#FFAB00] rounded-full blur-[4px] opacity-100" />
+                                <img src={coinImg} alt="Coin" className="w-full h-full relative z-10" />
+                            </div>
                             <span className="text-white text-[14px] font-['Montserrat'] font-bold tracking-wide">{win.amount}</span>
                         </div>
                     </div>
@@ -125,8 +99,7 @@ export default function RecentWinsSection() {
                 }}
             >
                 <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#051711] to-transparent z-10 pointer-events-none rounded-l-[20px]" />
-                <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#051711] to-transparent z-10 pointer-events-none rounded-r-[20px]" />
-
+                <div className="absolute right-0 top-0 bottom-0 w-[120px] md:w-[200px] lg:w-[280px] bg-gradient-to-l from-[#051711] via-[#051711]/90 to-transparent z-10 pointer-events-none rounded-r-[20px]" />
                 <RecentWinsMarquee />
             </div>
         </section>

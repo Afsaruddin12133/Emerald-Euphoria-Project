@@ -42,75 +42,105 @@ const CustomChevronDown = () => (
 );
 
 export function Footer() {
+    const logoElement = <img src={logoImg} alt="Emerald Euphoria" className="w-[120px] h-[92px] object-contain" />;
+    
+    const socialsElement = (
+        <div className="flex items-center gap-3">
+            <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
+                <CustomFacebookIcon />
+            </a>
+            <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
+                <CustomInstagramIcon />
+            </a>
+            <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
+                <CustomXIcon />
+            </a>
+            <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
+                <CustomWhatsappIcon />
+            </a>
+            <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
+                <CustomSendIcon />
+            </a>
+        </div>
+    );
+
+    const legalTextElement = (
+        <p className="text-[#556761] text-[13px] leading-relaxed font-normal">
+            Emerald Euphoria is owned and operated by Rtech LTD (Registration No. 16110), registered in Hamchako, Mutsamudu, Autonomous Island of Anjouan,
+            Union of Comoros. It is licensed and regulated by the Government of Anjouan under License No. ALSI-202509056-F12, fully authorized for gaming and
+            wagering operations. For support:
+            support@emeraldeuphoria.com
+        </p>
+    );
+
+    const copyrightElement = (
+        <p className="text-[#556761] text-[13px] font-normal">
+            © 2026 | ALL RIGHTS RESERVED
+        </p>
+    );
+
     return (
         <footer className="bg-[#030d09] pt-16 pb-8 mt-auto w-full relative z-10 border-t border-white/5">
             <div className="container-custom">
-                {/* Top Section */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
-                    <img src={logoImg} alt="Emerald Euphoria" className="w-[120px] h-[92px] object-contain" />
-                    <div className="flex items-center gap-3">
-                        <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
-                            <CustomFacebookIcon />
-                        </a>
-                        <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
-                            <CustomInstagramIcon />
-                        </a>
-                        <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
-                            <CustomXIcon />
-                        </a>
-                        <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
-                            <CustomWhatsappIcon />
-                        </a>
-                        <a href="#" className="w-11 h-11 rounded-[12px] bg-[#0c1f17] flex items-center justify-center hover:bg-[#122e23] transition-colors group">
-                            <CustomSendIcon />
-                        </a>
-                    </div>
+                
+                {/* Desktop Top Section */}
+                <div className="hidden md:flex flex-row items-center justify-between gap-6 mb-16">
+                    {logoElement}
+                    {socialsElement}
                 </div>
 
-                {/* Middle Section */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16 font-['Montserrat']">
+                {/* Mobile Top Section */}
+                <div className="flex md:hidden flex-col items-start text-left mb-12">
+                    <div className="mb-6">{logoElement}</div>
+                    <div className="mb-6 pr-4">{legalTextElement}</div>
+                    <div className="mb-6">{socialsElement}</div>
+                    <div>{copyrightElement}</div>
+                </div>
+
+                {/* Middle Section (Links Grid) */}
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-10 gap-x-4 md:gap-8 mb-16 font-['Montserrat']">
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Games</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">15+ Platforms</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Slots</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Fish Games</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">More</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">15+ Platforms</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Slots</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Fish Games</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">More</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">About us</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">All Games</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Why Choose Us</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">How to Play</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Reviews</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Rewards</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">FAQ</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">All Games</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Why Choose Us</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">How to Play</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Reviews</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Rewards</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">FAQ</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Support/Legal</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Responsible Gambling</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Terms of Service</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Live Support</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Responsible Gambling</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Terms of Service</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Live Support</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Rules</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Privacy Policy</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">AML Policy</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Terms & Conditions</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">KYC Verify</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-medium">Withdrawal Of Funds</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Privacy Policy</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">AML Policy</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Terms & Conditions</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">KYC Verify</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Withdrawal Of Funds</Link></li>
                         </ul>
                     </div>
                     
                     {/* Language Dropdown */}
-                    <div className="lg:col-span-1 flex justify-start lg:justify-end">
-                        <button className="flex items-center gap-3 bg-[#0a1e16] border border-white/5 rounded-[10px] px-5 h-[48px] text-white font-bold hover:bg-[#0c241a] transition-colors w-full lg:w-auto self-start">
+                    <div className="col-span-2 lg:col-span-1 flex justify-start lg:justify-end hidden md:flex">
+                        <button className="flex items-center gap-3 bg-[#0a1e16] border border-white/5 rounded-[10px] px-5 h-[48px] text-white font-normal hover:bg-[#0c241a] transition-colors w-full lg:w-auto self-start">
                             <img src={ukFlagImg} alt="UK" className="w-5 h-auto rounded-sm" />
                             <span>English</span>
                             <CustomChevronDown />
@@ -118,17 +148,17 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="w-full h-[1px] bg-white/[0.04] mb-8" />
-
-                <div className="text-center font-['Montserrat']">
-                    <p className="text-[#556761] text-[13px] leading-relaxed max-w-5xl mx-auto mb-6 font-semibold">
-                        Emerald Euphoria is owned and operated by Rtech LTD (Registration No. 16110), registered in Hamchako, Mutsamudu, Autonomous Island of Anjouan,
-                        Union of Comoros. It is licensed and regulated by the Government of Anjouan under License No. ALSI-202509056-F12, fully authorized for gaming and
-                        wagering operations. For support: support@emeraldeuphoria.com
-                    </p>
-                    <p className="text-[#556761] text-[13px] font-semibold">
-                        © 2026 | ALL RIGHTS RESERVED
-                    </p>
+                {/* Desktop Bottom Section */}
+                <div className="hidden md:block">
+                    <div className="w-full h-[1px] bg-white/[0.04] mb-8" />
+                    <div className="text-center font-['Montserrat']">
+                        <div className="max-w-5xl mx-auto mb-6">
+                            {legalTextElement}
+                        </div>
+                        <div>
+                            {copyrightElement}
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
