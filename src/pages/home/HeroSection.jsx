@@ -13,7 +13,7 @@ import trollyImg from '@/assets/magnific trolly.png';
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full overflow-hidden pt-32 pb-20 h-[1100px] lg:h-auto lg:min-h-screen flex items-start lg:items-center" id="hero">
+        <section className="relative w-full overflow-hidden pt-32 pb-12 lg:pb-20 h-[1100px] lg:h-auto lg:min-h-screen flex items-start lg:items-center" id="hero">
             {/* Background Image */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -32,31 +32,24 @@ export default function HeroSection() {
                         animate="visible"
                         variants={staggerContainer(0.1, 0.1)}
                     >
-                        <motion.div variants={fadeInUp} className="mb-6 mt-[-10px] lg:mt-6">
-                            <h1
-                                className="font-['Montserrat'] font-black font-extrabold uppercase text-[40px] sm:text-[55px] lg:text-[70px] leading-[0.9] tracking-[-0.03em] text-white"
-                                style={{
-                                    textShadow: "2px 0 0 currentColor, -1px 0 0 currentColor"
-                                }}
-                            >
-                                <span className='text-[26px] sm:text-[55px] lg:text-[70px] leading-[0.5] tracking-[-0.03em]'> Welcome  <span className='pl-2'>to</span></span>
-                                <br />
+                        <motion.div variants={fadeInUp} className="mb-6 mt-[-10px] lg:mt-4">
+                            <h1 className="font-['Montserrat'] font-black text-[40px] md:text-[70px] leading-[0.9] tracking-[-0.02em] uppercase text-white">
+                                <span className="block text-[24px] sm:text-[40px] md:text-[70px] font-extrabold sm:font-black leading-[0.9] tracking-[-0.02em] text-center lg:text-left mb-6 lg:mb-0">WELCOME TO</span>
                                 <span
-                                    className="text-transparent bg-clip-text whitespace-nowrap
-             drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] tracking-[-0.06em]"
+                                    className="block -mt-1 sm:mt-0 text-transparent bg-clip-text drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] whitespace-normal lg:whitespace-nowrap"
                                     style={{
                                         backgroundImage:
                                             'linear-gradient(180deg, #68E203 10%, #C6FF94 40%, #68E203 50%, #C6FF94 60%, #68E203 100%)',
                                     }}
                                 >
-                                    Emerald <br className="block lg:hidden" /> <span className="pl-2 lg:pl-0">Euphoria</span>
+                                    EMERALD <br className="block lg:hidden" /> EUPHORIA
                                 </span>
                             </h1>
                         </motion.div>
 
                         <motion.p
                             variants={fadeInUp}
-                            className="font-['Montserrat'] font-medium mt-[-8px] text-[16px] sm:text-[18px] text-[#556761] leading-none tracking-normal max-w-[550px] mb-8"
+                            className="font-['Montserrat'] font-bold mt-[-8px] text-[18px] text-[#556761] leading-none tracking-normal max-w-[550px] mb-8"
                         >
                             Your favorite gameroom for slots, fish games and keno.
                             Enjoy more than 15 Platforms at one place and
@@ -65,11 +58,11 @@ export default function HeroSection() {
                         </motion.p>
 
                         <motion.div variants={fadeInUp} className="mb-8 w-full flex flex-col items-center lg:items-start">
-                            <h2 className="text-white font-['Montserrat'] font-bold text-2xl mb-4">Register & Claim</h2>
+                            <h2 className="text-white font-['Montserrat'] font-bold text-[22px] leading-none tracking-normal mb-4">Register & Claim</h2>
 
-                            <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-[10px] w-full max-w-[405px] mt-2">
-                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-[145px] sm:w-[175px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
-                                    <span className="text-white text-[12px] sm:text-[15px] font-['Montserrat'] font-bold whitespace-nowrap z-10">100% Sign Up</span>
+                            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-[10px] w-full mt-2">
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[46px] sm:pr-[54px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
+                                    <span className="text-white font-['Montserrat'] font-bold text-[12px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10">100% Sign Up</span>
                                     <img
                                         src={gemesBoxImg}
                                         alt="Games Box"
@@ -80,8 +73,8 @@ export default function HeroSection() {
 
                                 <span className="text-white font-bold text-2xl sm:text-3xl leading-none z-10 px-1 sm:px-2">+</span>
 
-                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-[155px] sm:w-[189px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
-                                    <span className="text-white text-[12px] sm:text-[15px] font-['Montserrat'] font-bold whitespace-nowrap z-10">20% All Deposit</span>
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[46px] sm:pr-[54px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
+                                    <span className="text-white font-['Montserrat'] font-bold text-[12px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10">20% All Deposit</span>
                                     <img
                                         src={circalImg}
                                         alt="Clover"
@@ -95,7 +88,7 @@ export default function HeroSection() {
                         <motion.div variants={fadeInUp} className="mb-48 lg:mb-0 mt-2 sm:mt-0">
                             <Link
                                 to="/sign-up"
-                                className="inline-flex items-center justify-center w-[158px] h-[54px] pt-[19px] pr-[25px] pb-[19px] pl-[25px] gap-[10px] rounded-[12px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] text-[17px] hover:opacity-90 transition-opacity shadow-[0_0_20px_rgba(104,226,3,0.3)] hover:shadow-[0_0_30px_rgba(104,226,3,0.5)]"
+                                className="inline-flex items-center justify-center w-[158px] h-[54px] pt-[19px] pr-[25px] pb-[19px] pl-[25px] gap-[10px] rounded-[12px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[16px] leading-none tracking-[-0.02em] hover:opacity-90 transition-opacity shadow-[0_0_20px_rgba(104,226,3,0.3)] hover:shadow-[0_0_30px_rgba(104,226,3,0.5)]"
                             >
                                 Claim Now
                             </Link>

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 import goldenDragonImg from '@/assets/goldendragron.png';
-import juwaImg from '@/assets/juwa copy.png';
 import juwa1Img from '@/assets/jawa1.png';
+import juwaImg from '@/assets/juwa copy.png';
 import luckyImg from '@/assets/lucky777.png';
 import magicCityImg from '@/assets/magiccity.png';
 import milkyWaysImg from '@/assets/milkyways.png';
@@ -179,10 +179,10 @@ function SmoothMarquee({ items }) {
 
 export default function TrustedPlatformsSection() {
     return (
-        <section className="w-full py-[80px] relative z-20">
+        <section className="w-full py-12 lg:py-20 relative z-20">
             <div className="container-custom">
                 <div className="text-center mb-10">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[36px] sm:text-[44px] leading-none tracking-normal">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">TRUSTED </span>
                         <span className="text-[#68E203]">PLATFORMS</span>
                     </h2>

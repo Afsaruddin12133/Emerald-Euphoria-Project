@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
-import man1Img from '@/assets/manimages.jpg';
-import womanImg from '@/assets/womanimages.jpg';
 import man2Img from '@/assets/man.jpg';
+import man1Img from '@/assets/manimages.jpg';
 import starImg from '@/assets/star.png';
+import womanImg from '@/assets/womanimages.jpg';
 
 const TESTIMONIALS = [
     {
@@ -25,12 +25,12 @@ const TESTIMONIALS = [
 
 export default function TestimonialSection() {
     return (
-        <section className="w-full py-[80px] relative z-20">
+        <section className="w-full py-12 lg:py-20 relative z-20">
             <div className="container-custom max-w-[1280px] mx-auto">
                 
                 {/* Title */}
                 <div className="text-center mb-[60px] md:mb-[80px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[36px] md:text-[44px] leading-none tracking-normal">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">TRUSTED BY</span>
                         <br />
                         <span className="text-[#68E203]">10,000+ PLAYERS</span>
@@ -79,9 +79,9 @@ export default function TestimonialSection() {
                             </div>
 
                             {/* Text Content */}
-                            <h4 className="text-white font-['Montserrat'] font-bold text-[22px] mb-[12px]">{t.name}</h4>
+                            <h4 className="text-white font-['Montserrat'] font-bold text-[16px] mb-[12px] leading-[100%]" style={{ letterSpacing: '0' }}>{t.name}</h4>
                             
-                            <p className="text-[#556761] font-['Montserrat'] font-medium text-[15px] leading-[1.6]">
+                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-[110%]" style={{ letterSpacing: '0' }}>
                                 {t.text}
                             </p>
                             

@@ -3,22 +3,22 @@ import { motion } from 'framer-motion';
 import mascotImg from '@/assets/muscot123.png';
 
 // Games
-import goldenDragonImg from '@/assets/goldendragron.png';
-import orionStarsImg from '@/assets/orionstrars.png';
 import firekirinImg from '@/assets/firekirin.png';
 import gameVaultAltImg from '@/assets/game vault.png';
+import goldenDragonImg from '@/assets/goldendragron.png';
 import juwaImg from '@/assets/juwa.png';
 import milkyWaysImg from '@/assets/milkyways.png';
-import ultraPandaImg from '@/assets/ultrapanda.png';
+import orionStarsImg from '@/assets/orionstrars.png';
 import riverSweepsImg from '@/assets/riversweeps.png';
+import ultraPandaImg from '@/assets/ultrapanda.png';
 
 // Payments
 import cryptoImg from '@/assets/cryptologo.png';
-import visaImg from '@/assets/visa.png';
-import mastercardImg from '@/assets/Mastercard-logo 1.png';
 import dollarImg from '@/assets/dollersign.png';
+import mastercardImg from '@/assets/Mastercard-logo 1.png';
 import paypalImg from '@/assets/PayPal 1.png';
 import tierlockImg from '@/assets/tierlock.png';
+import visaImg from '@/assets/visa.png';
 
 // Rewards
 import chestImg from '@/assets/gemes box.png';
@@ -47,7 +47,7 @@ const PAYMENTS = [
 function BlockContainer({ children, className = "" }) {
     return (
         <div 
-            className={`w-full rounded-[25px] flex flex-col p-[35px] ${className}`}
+            className={`w-full rounded-[25px] flex flex-col p-[20px] sm:p-[35px] ${className}`}
             style={{ 
                 background: 'var(--Shade-02, #051711)', 
                 border: '1px solid var(--Shade-03, #0F211B)' 
@@ -61,7 +61,7 @@ function BlockContainer({ children, className = "" }) {
 function ClaimButton() {
     return (
         <button 
-            className="w-full h-[54px] rounded-[12px] text-white font-['Montserrat'] font-bold text-[16px] hover:opacity-90 transition-opacity mt-auto"
+            className="w-full h-[54px] rounded-[12px] text-white font-['Montserrat'] font-bold text-[16px] leading-none tracking-[-0.02em] hover:opacity-90 transition-opacity mt-auto"
             style={{ 
                 background: 'linear-gradient(90deg, #107015 0%, #68E203 100%)',
                 padding: '19px 25px'
@@ -76,15 +76,15 @@ function ClaimButton() {
 
 export default function HowToPlaySection() {
     return (
-        <section className="w-full py-[80px] relative z-20">
+        <section className="w-full py-12 lg:py-20 relative z-20">
             <div className="container-custom">
                 
                 {/* Title */}
-                <div className="text-center mb-[60px] md:mb-[100px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[36px] md:text-[44px] leading-none tracking-normal">
-                        <span className="text-white">HOW TO PLAY IN</span>
+                <div className="text-center mb-[40px] md:mb-[100px]">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[28px] sm:text-[36px] md:text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                        <span className="text-white whitespace-nowrap">HOW TO PLAY IN</span>
                         <br />
-                        <span className="text-[#68E203]">3 EASY STEPS</span>
+                        <span className="text-[#68E203] whitespace-nowrap">3 EASY STEPS</span>
                     </h2>
                 </div>
 
@@ -92,7 +92,7 @@ export default function HowToPlaySection() {
                 <div className="w-full max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[40px] lg:gap-0">
                     
                     {/* Left Side: Mascot */}
-                    <div className="w-full lg:w-[600px] flex justify-center lg:justify-start lg:-ml-[50px] relative pointer-events-none">
+                    <div className="hidden lg:flex w-full lg:w-[600px] justify-center lg:justify-start lg:-ml-[50px] relative pointer-events-none">
                         <motion.img 
                             src={mascotImg} 
                             alt="Mascot" 
@@ -115,17 +115,33 @@ export default function HowToPlaySection() {
                         {/* Step 1 */}
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                             <BlockContainer>
-                                <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Register & claim</h3>
-                                <p className="text-[#556761] font-['Montserrat'] text-[14px] mb-[24px]">Sign Up today & unlock instant rewards.</p>
+                                <h3 className="text-white font-['Montserrat'] font-bold text-[22px] leading-none tracking-normal mb-1">Register & Claim</h3>
+                                <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Sign Up today & unlock instant rewards.</p>
                                 
-                                <div className="flex items-center gap-[10px] w-full mb-[24px]">
-                                    <div className="flex-1 h-[54px] rounded-[12px] bg-[#0F211B] flex items-center justify-between px-4">
-                                        <span className="text-white font-['Montserrat']  text-[14px]">100% Sign Up</span>
+                                <div className="flex items-center justify-center md:justify-between gap-2 sm:gap-[10px] w-full mb-[24px]">
+                                    {/* Mobile: Overlapping image to prevent squishing */}
+                                    <div className="md:hidden relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[36px] sm:pr-[46px] h-[48px] sm:h-[54px] pl-[10px] sm:pl-[16px] flex-1 sm:flex-none max-w-[50%] sm:max-w-none">
+                                        <span className="text-white font-['Montserrat'] font-bold text-[10px] min-[375px]:text-[11px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10">100% Sign Up</span>
+                                        <img src={chestImg} alt="Chest" className="absolute w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] right-[-12px] sm:right-[-15px] top-1/2 -translate-y-1/2 z-20 object-contain" style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.25))' }} />
+                                    </div>
+                                    
+                                    {/* Desktop: Original flex-1 layout */}
+                                    <div className="hidden md:flex flex-1 h-[54px] rounded-[12px] bg-[#0F211B] items-center justify-between px-4">
+                                        <span className="text-white font-['Montserrat'] font-bold text-[14px] leading-none tracking-normal">100% Sign Up</span>
                                         <img src={chestImg} alt="Chest" className="h-[40px] object-contain" />
                                     </div>
-                                    <span className="text-white font-bold text-[24px]">+</span>
-                                    <div className="flex-1 h-[54px] rounded-[12px] bg-[#0F211B] flex items-center justify-between px-4">
-                                        <span className="text-white font-['Montserrat']  text-[14px]">20% All Deposit</span>
+
+                                    <span className="text-white font-bold text-[18px] md:text-[24px] z-10 shrink-0 px-1">+</span>
+
+                                    {/* Mobile: Overlapping image to prevent squishing */}
+                                    <div className="md:hidden relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[36px] sm:pr-[46px] h-[48px] sm:h-[54px] pl-[10px] sm:pl-[16px] flex-1 sm:flex-none max-w-[50%] sm:max-w-none">
+                                        <span className="text-white font-['Montserrat'] font-bold text-[10px] min-[375px]:text-[11px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10">20% All Deposit</span>
+                                        <img src={cloverImg} alt="Clover" className="absolute w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] right-[-12px] sm:right-[-15px] top-1/2 -translate-y-1/2 z-20 object-contain" style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.25))' }} />
+                                    </div>
+
+                                    {/* Desktop: Original flex-1 layout */}
+                                    <div className="hidden md:flex flex-1 h-[54px] rounded-[12px] bg-[#0F211B] items-center justify-between px-4">
+                                        <span className="text-white font-['Montserrat'] font-bold text-[14px] leading-none tracking-normal">20% All Deposit</span>
                                         <img src={cloverImg} alt="Clover" className="h-[40px] object-contain" />
                                     </div>
                                 </div>
@@ -138,7 +154,7 @@ export default function HowToPlaySection() {
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Play your favorite games</h3>
-                                <p className="text-[#556761] font-['Montserrat']  text-[14px] mb-[24px]">Unlimited fun with top casino games.</p>
+                                <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Unlimited fun with top casino games.</p>
                                 
                                 <div className="grid grid-cols-4 gap-[20px] mb-[24px]">
                                     {GAMES.map((img, idx) => (
@@ -156,7 +172,7 @@ export default function HowToPlaySection() {
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Withdrawal immediately</h3>
-                                <p className="text-[#556761] font-['Montserrat'] font-medium text-[14px] mb-[24px]">Fast withdrawals always, better experience.</p>
+                                <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Fast withdrawals always, better experience.</p>
                                 
                                 <div className="grid grid-cols-3 gap-[12px] mb-[24px]">
                                     {PAYMENTS.map((img, idx) => (

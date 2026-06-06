@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
-import { NAV_LINKS } from '@/lib/constants'
-import { cn } from '@/lib/cn'
-import logoImg from '@/assets/logo.png'
-import { AuthModal } from './AuthModal'
+import logoImg from '@/assets/logo.png';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthModal } from './AuthModal';
 
 // ─── Public Navbar (Landing + Popup pages) ────────────────────────────────────
 export function Navbar() {
@@ -23,16 +20,18 @@ export function Navbar() {
       <div className="mx-auto w-full max-w-[1440px] px-4 lg:px-4 pointer-events-auto">
         <nav className="relative flex h-[60px] lg:h-[80px] w-full items-center pr-4 lg:pr-[15px] bg-[#FFFFFF0A] backdrop-blur-[20px] rounded-[16px]">
           {/* Auth CTAs */}
-          <div className="flex items-center gap-2 lg:gap-[10px] shrink-0 ml-auto z-10">
+            <div className="flex items-center gap-2 lg:gap-[10px] shrink-0 ml-auto z-10">
             <button
               onClick={() => openAuth('signin')}
-              className="flex cursor-pointer items-center justify-center w-[70px] lg:w-[101px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-[#FFFFFF33] hover:bg-[#FFFFFF4D] text-white font-medium text-xs lg:text-sm transition-colors"
+              className="flex cursor-pointer items-center justify-center w-[70px] lg:w-[101px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-[#FFFFFF33] hover:bg-[#FFFFFF4D] text-white font-['Montserrat'] font-bold text-[16px] leading-none transition-colors"
+              style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
             >
               Log In
             </button>
             <button
               onClick={() => openAuth('signup')}
-              className="flex cursor-pointer items-center justify-center w-[90px] lg:w-[118px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-medium text-xs lg:text-sm hover:opacity-90 transition-opacity"
+              className="flex cursor-pointer items-center justify-center w-[90px] lg:w-[118px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[16px] leading-none hover:opacity-90 transition-opacity"
+              style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
             >
               Register
             </button>

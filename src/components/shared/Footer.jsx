@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import logoImg from '@/assets/logo.png';
 import ukFlagImg from '@/assets/ukflag.png';
+import { Link } from 'react-router-dom';
 
 const CustomXIcon = () => (
     <svg className="w-4 h-4 text-[#738c82] group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
@@ -65,16 +65,15 @@ export function Footer() {
     );
 
     const legalTextElement = (
-        <p className="text-[#556761] text-[13px] leading-relaxed font-normal">
+        <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>
             Emerald Euphoria is owned and operated by Rtech LTD (Registration No. 16110), registered in Hamchako, Mutsamudu, Autonomous Island of Anjouan,
             Union of Comoros. It is licensed and regulated by the Government of Anjouan under License No. ALSI-202509056-F12, fully authorized for gaming and
-            wagering operations. For support:
-            support@emeraldeuphoria.com
+            wagering operations. For support: support@emeraldeuphoria.com
         </p>
     );
 
     const copyrightElement = (
-        <p className="text-[#556761] text-[13px] font-normal">
+        <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>
             © 2026 | ALL RIGHTS RESERVED
         </p>
     );
@@ -102,39 +101,39 @@ export function Footer() {
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Games</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">15+ Platforms</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Slots</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Fish Games</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">More</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>15+ Platforms</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Slots</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Fish Games</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>More</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">About us</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">All Games</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Why Choose Us</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">How to Play</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Reviews</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Rewards</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">FAQ</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>All Games</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Why Choose Us</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>How to Play</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Reviews</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Rewards</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>FAQ</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Support/Legal</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Responsible Gambling</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Terms of Service</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Live Support</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Responsible Gambling</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Terms of Service</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Live Support</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Rules</h4>
                         <ul className="space-y-4">
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Privacy Policy</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">AML Policy</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Terms & Conditions</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">KYC Verify</Link></li>
-                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-normal">Withdrawal Of Funds</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Privacy Policy</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>AML Policy</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Terms & Conditions</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>KYC Verify</Link></li>
+                            <li><Link to="#" className="text-[#738c82] hover:text-white transition-colors font-['Montserrat'] font-bold text-[16px] leading-none" style={{ letterSpacing: '-0.02em', lineHeight: '1' }}>Withdrawal Of Funds</Link></li>
                         </ul>
                     </div>
                     

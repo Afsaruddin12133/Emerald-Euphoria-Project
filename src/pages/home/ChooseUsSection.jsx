@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
-import securityShieldImg from '@/assets/security shield.png';
-import headphoneImg from '@/assets/headphone.png';
 import cashMoneyImg from '@/assets/cash money.png';
+import headphoneImg from '@/assets/headphone.png';
 import rewardImg from '@/assets/Reward probabiliry.png';
+import securityShieldImg from '@/assets/security shield.png';
 
 export default function ChooseUsSection() {
     const cards = [
@@ -34,7 +34,7 @@ export default function ChooseUsSection() {
     ]
 
     return (
-        <section className="w-full relative py-[80px]">
+        <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
                 <div className="text-center mb-[120px]">
                     <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
@@ -69,7 +69,7 @@ export default function ChooseUsSection() {
                                             src={c.img}
                                             alt={c.title}
                                             className="absolute pointer-events-none"
-                                            style={{ width: 150, height: 150, left: 53, top: -90, filter: 'drop-shadow(0px 0px 40px rgba(0,0,0,0.25))' }}
+                                            style={{ width: 180, height: 180, left: 53, top: -90, filter: 'drop-shadow(0px 0px 40px rgba(0,0,0,0.25))' }}
                                             initial={{ y: -6 }}
                                             animate={{ y: 6 }}
                                             transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }}
@@ -77,8 +77,8 @@ export default function ChooseUsSection() {
 
                                         {/* Content pushed down to make room for the protruding icon */}
                                         <div className="mt-[110px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[22px] leading-[1.2] mb-[10px] h-[55px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] text-[14px] leading-[1.4] whitespace-pre-line px-2 w-full">{c.desc}</p>
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[24px] leading-none tracking-[-0.02em] text-center mb-[10px] h-[55px] flex items-center justify-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal text-center whitespace-pre-line px-2 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -113,8 +113,8 @@ export default function ChooseUsSection() {
                                         />
 
                                         <div className="mt-[65px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[15px] sm:text-[18px] leading-[1.2] mb-[6px] h-[45px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] font-medium text-[11px] sm:text-[13px] leading-[1.4] whitespace-pre-line px-1 w-full">{c.desc}</p>
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[24px] leading-none tracking-[-0.02em] text-center mb-[6px] pb-2 h-[45px] flex items-center justify-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>

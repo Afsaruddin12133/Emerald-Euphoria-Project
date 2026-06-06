@@ -36,8 +36,8 @@
   --color-surface-100: oklch(0.94 0.004 240);
 
   /* Typography */
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
   /* Border Radius */
   --radius-xs: 0.25rem;
