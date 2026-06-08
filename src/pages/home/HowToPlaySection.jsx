@@ -46,11 +46,11 @@ const PAYMENTS = [
 
 function BlockContainer({ children, className = "" }) {
     return (
-        <div 
-            className={`w-full rounded-[25px] flex flex-col p-[20px] sm:p-[35px] ${className}`}
-            style={{ 
-                background: 'var(--Shade-02, #051711)', 
-                border: '1px solid var(--Shade-03, #0F211B)' 
+        <div
+            className={`w-full rounded-[25px] flex flex-col p-[20px] sm:p-[35px] overflow-hidden ${className}`}
+            style={{
+                background: 'var(--Shade-02, #051711)',
+                border: '1px solid var(--Shade-03, #0F211B)'
             }}
         >
             {children}
@@ -60,9 +60,9 @@ function BlockContainer({ children, className = "" }) {
 
 function ClaimButton() {
     return (
-        <button 
+        <button
             className="w-full h-[54px] rounded-[12px] text-white font-['Montserrat'] font-bold text-[16px] leading-none tracking-[-0.02em] hover:opacity-90 transition-opacity mt-auto"
-            style={{ 
+            style={{
                 background: 'linear-gradient(90deg, #107015 0%, #68E203 100%)',
                 padding: '19px 25px'
             }}
@@ -78,10 +78,10 @@ export default function HowToPlaySection() {
     return (
         <section className="w-full py-12 lg:py-20 relative z-20">
             <div className="container-custom">
-                
+
                 {/* Title */}
                 <div className="text-center mb-[40px] md:mb-[100px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[28px] sm:text-[36px] md:text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[40px] sm:text-[40px] md:text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white whitespace-nowrap">HOW TO PLAY IN</span>
                         <br />
                         <span className="text-[#68E203] whitespace-nowrap">3 EASY STEPS</span>
@@ -90,18 +90,18 @@ export default function HowToPlaySection() {
 
                 {/* Main Content Layout */}
                 <div className="w-full max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[40px] lg:gap-0">
-                    
+
                     {/* Left Side: Mascot */}
                     <div className="hidden lg:flex w-full lg:w-[600px] justify-center lg:justify-start lg:-ml-[50px] relative pointer-events-none">
-                        <motion.img 
-                            src={mascotImg} 
-                            alt="Mascot" 
+                        <motion.img
+                            src={mascotImg}
+                            alt="Mascot"
                             className="w-full max-w-[750px] h-auto object-contain mix-blend-lighten relative z-10"
                             initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
-                            style={{ 
+                            style={{
                                 mixBlendMode: 'lighten',
                                 WebkitMaskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)',
                                 maskImage: 'radial-gradient(ellipse at center, black 60%, transparent 100%)'
@@ -111,20 +111,20 @@ export default function HowToPlaySection() {
 
                     {/* Right Side: 3 Steps */}
                     <div className="w-full lg:w-[640px] flex flex-col gap-[20px]">
-                        
+
                         {/* Step 1 */}
                         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[22px] leading-none tracking-normal mb-1">Register & Claim</h3>
                                 <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Sign Up today & unlock instant rewards.</p>
-                                
+
                                 <div className="flex items-center justify-center md:justify-between gap-2 sm:gap-[10px] w-full mb-[24px]">
                                     {/* Mobile: Overlapping image to prevent squishing */}
                                     <div className="md:hidden relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[36px] sm:pr-[46px] h-[48px] sm:h-[54px] pl-[10px] sm:pl-[16px] flex-1 sm:flex-none max-w-[50%] sm:max-w-none">
                                         <span className="text-white font-['Montserrat'] font-bold text-[10px] min-[375px]:text-[11px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10">100% Sign Up</span>
                                         <img src={chestImg} alt="Chest" className="absolute w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] right-[-12px] sm:right-[-15px] top-1/2 -translate-y-1/2 z-20 object-contain" style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.25))' }} />
                                     </div>
-                                    
+
                                     {/* Desktop: Original flex-1 layout */}
                                     <div className="hidden md:flex flex-1 h-[54px] rounded-[12px] bg-[#0F211B] items-center justify-between px-4">
                                         <span className="text-white font-['Montserrat'] font-bold text-[14px] leading-none tracking-normal">100% Sign Up</span>
@@ -155,11 +155,21 @@ export default function HowToPlaySection() {
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Play your favorite games</h3>
                                 <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Unlimited fun with top casino games.</p>
-                                
-                                <div className="grid grid-cols-4 gap-[20px] mb-[24px]">
+
+                                {/* Desktop: original layout — unchanged */}
+                                <div className="hidden md:grid grid-cols-4 gap-[20px] mb-[24px]">
                                     {GAMES.map((img, idx) => (
                                         <div key={idx} className="w-full aspect-square rounded-[15px] overflow-hidden" style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.3))' }}>
                                             <img src={img} alt="Game" className="w-full h-full object-cover" />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Mobile: full-width grid, each image fixed 50×50px centered */}
+                                <div className="md:hidden grid grid-cols-4 gap-[12px] mb-[24px]">
+                                    {GAMES.map((img, idx) => (
+                                        <div key={idx} className="w-full aspect-square overflow-hidden flex items-center justify-center" style={{ filter: 'drop-shadow(0px 4px 10px rgba(0,0,0,0.3))' }}>
+                                            <img src={img} alt="Game" className="w-full h-full object-cover rounded-[8px]" />
                                         </div>
                                     ))}
                                 </div>
@@ -173,17 +183,33 @@ export default function HowToPlaySection() {
                             <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Withdrawal immediately</h3>
                                 <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Fast withdrawals always, better experience.</p>
-                                
-                                <div className="grid grid-cols-3 gap-[12px] mb-[24px]">
+
+                                {/* Desktop: original layout — unchanged */}
+                                <div className="hidden md:grid grid-cols-3 gap-[12px] mb-[24px]">
                                     {PAYMENTS.map((img, idx) => (
-                                        <div 
-                                            key={idx} 
+                                        <div
+                                            key={idx}
                                             className="w-full h-[120px] rounded-[15px] flex items-center justify-center p-4 transition-transform hover:scale-105"
-                                            style={{ 
+                                            style={{
                                                 background: 'radial-gradient(50% 80% at 50% 0%, rgba(255,255,255,0.12) 0%, var(--Shade-03, #0F211B) 100%)'
                                             }}
                                         >
                                             <img src={img} alt="Payment" className="max-w-[80%] max-h-[60%] object-contain opacity-90" />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Mobile: fixed 104×70px cards, content fits perfectly inside */}
+                                <div className="md:hidden grid grid-cols-3  gap-x-[50px] gap-y-[10px] mb-[24px] justify-items-center p-6">
+                                    {PAYMENTS.map((img, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="w-[90px] h-[65px] rounded-[12px] flex items-center justify-center p-2 transition-transform hover:scale-105"
+                                            style={{
+                                                background: 'radial-gradient(50% 80% at 50% 0%, rgba(255,255,255,0.12) 0%, var(--Shade-03, #0F211B) 100%)'
+                                            }}
+                                        >
+                                            <img src={img} alt="Payment" className="w-full h-full object-contain opacity-90" />
                                         </div>
                                     ))}
                                 </div>

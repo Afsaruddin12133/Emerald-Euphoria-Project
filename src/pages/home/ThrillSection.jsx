@@ -70,7 +70,7 @@ export default function ThrillSection() {
                             {cards.map((c, i) => (
                                 <motion.div 
                                     key={c.title} 
-                                    className="w-full aspect-[4/5] sm:aspect-square relative rounded-[20px] overflow-hidden h-[150px]"
+                                    className="w-full relative rounded-[20px] overflow-hidden h-[112px]"
                                     style={{ border: '1px solid var(--Shade-03, #0F211B)', background: 'var(--Shade-02, #051711)' }}
                                     initial={{ opacity: 0, y: 18 }} 
                                     whileInView={{ opacity: 1, y: 0 }} 
@@ -81,17 +81,17 @@ export default function ThrillSection() {
                                     <div className="absolute right-0 top-0 w-[120%] h-[120%] pointer-events-none" style={{ background: c.bg, opacity: 0.8, maskImage: 'radial-gradient(circle at top right, black 0%, transparent 60%)', WebkitMaskImage: 'radial-gradient(circle at top right, black 0%, transparent 60%)' }} />
                                     
                                     <div className="absolute top-[16px] left-[16px] right-[16px] z-10">
-                                        <div className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[26px] leading-none tracking-[-0.02em]">{c.title}</div>
+                                        <div className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[18px] leading-none tracking-[-0.02em]">{c.title}</div>
                                     </div>
                                     
-                                    <button aria-label={`Go to ${c.title}`} className="absolute bottom-[16px] left-[16px] w-[36px] h-[36px] sm:w-[42px] sm:h-[42px] rounded-[10px] flex items-center justify-center border-t border-[rgba(255,255,255,0.02)] z-10" style={{ background: 'var(--Shade-04, #192B25)' }}>
+                                    <button aria-label={`Go to ${c.title}`} className="cursor-pointer absolute bottom-[16px] left-[16px] w-[36px] h-[36px] sm:w-[42px] sm:h-[42px] rounded-[10px] flex items-center justify-center border-t border-[rgba(255,255,255,0.02)] z-10" style={{ background: 'var(--Shade-04, #192B25)' }}>
                                         <ArrowRight size={18} color="#FFFFFF" />
                                     </button>
                                     
                                     <motion.img 
                                         src={c.img} 
                                         alt="icon" 
-                                        className="absolute right-[-5%] bottom-[-5%] w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] pointer-events-none" 
+                                        className="absolute right-[-5%] bottom-[-5%] w-[80px] h-[80px] sm:w-[130px] sm:h-[130px] pointer-events-none" 
                                         style={{ transform: 'rotate(-15deg)' }} 
                                         initial={{ y: -4 }} 
                                         animate={{ y: 4 }} 

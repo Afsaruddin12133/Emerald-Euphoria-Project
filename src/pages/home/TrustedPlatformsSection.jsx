@@ -156,13 +156,13 @@ function SmoothMarquee({ items }) {
         >
             <div 
                 ref={scrollRef}
-                className="flex items-center gap-[20px] overflow-x-hidden no-scrollbar" 
+                className="flex items-center gap-[12px] sm:gap-[20px] overflow-x-hidden no-scrollbar" 
                 style={{ cursor: 'grab', width: '100%', padding: '20px 0', touchAction: 'pan-y' }}
             >
                 {[...items, ...items].map((img, idx) => (
                     <div 
                         key={idx} 
-                        className="flex-shrink-0 w-[110px] h-[110px] sm:w-[130px] sm:h-[130px] rounded-[15px] overflow-hidden transition-transform duration-300 hover:scale-105"
+                        className="flex-shrink-0 w-[72px] h-[72px] sm:w-[130px] sm:h-[130px] rounded-[10px] sm:rounded-[15px] overflow-hidden transition-transform duration-300 hover:scale-105"
                         style={{ filter: 'drop-shadow(0px 10px 20px rgba(0,0,0,0.3))' }}
                     >
                         <img 

@@ -9,7 +9,7 @@ import OfferPopup from '@/components/shared/OfferPopup'
  */
 export function RootLayout() {
   return (
-    <div className="flex flex-col min-h-dvh bg-[#00120C]">
+    <div className="flex flex-col min-h-dvh bg-[#00120C] overflow-x-clip w-full">
       <Navbar />
       <div className="flex-1">
         <Outlet />

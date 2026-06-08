@@ -17,20 +17,20 @@ export function Navbar() {
     <header className="fixed top-[10px] lg:top-[20px] left-0 right-0 z-50 w-full pointer-events-none">
       
       {/* Nav Background and CTAs */}
-      <div className="mx-auto w-full max-w-[1440px] px-4 lg:px-4 pointer-events-auto">
+      <div className="mx-auto w-full max-w-[1440px] px-6 md:px-4 pointer-events-auto">
         <nav className="relative flex h-[60px] lg:h-[80px] w-full items-center pr-4 lg:pr-[15px] bg-[#FFFFFF0A] backdrop-blur-[20px] rounded-[16px]">
           {/* Auth CTAs */}
             <div className="flex items-center gap-2 lg:gap-[10px] shrink-0 ml-auto z-10">
             <button
               onClick={() => openAuth('signin')}
-              className="flex cursor-pointer items-center justify-center w-[70px] lg:w-[101px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-[#FFFFFF33] hover:bg-[#FFFFFF4D] text-white font-['Montserrat'] font-bold text-[16px] leading-none transition-colors"
+              className="flex cursor-pointer items-center justify-center w-[70px] lg:w-[101px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-[#FFFFFF33] hover:bg-[#FFFFFF4D] text-white font-['Montserrat'] font-extrabold lg:font-bold text-[13px] lg:text-[16px] leading-none transition-colors"
               style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
             >
               Log In
             </button>
             <button
               onClick={() => openAuth('signup')}
-              className="flex cursor-pointer items-center justify-center w-[90px] lg:w-[118px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[16px] leading-none hover:opacity-90 transition-opacity"
+              className="flex cursor-pointer items-center justify-center w-[90px] lg:w-[118px] h-[35px] lg:h-[45px] rounded-[10px] lg:rounded-[13px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-extrabold lg:font-bold text-[13px] lg:text-[16px] leading-none hover:opacity-90 transition-opacity"
               style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
             >
               Register
@@ -43,7 +43,7 @@ export function Navbar() {
       <div className="container-custom absolute top-0 left-0 right-0 bottom-0 mx-auto pointer-events-none">
         <Link
           to="/"
-          className="absolute left-[24px] md:left-[32px] lg:top-[10px] top-1/2 -translate-y-1/2 lg:translate-y-0 w-[80px] h-[60px] lg:w-[120px] lg:h-[92px] shrink-0 z-10 pointer-events-auto"
+          className="absolute left-[36px] md:left-[32px] lg:top-[10px] top-1/2 -translate-y-1/2 lg:translate-y-0 w-[80px] h-[60px] lg:w-[120px] lg:h-[92px] shrink-0 z-10 pointer-events-auto"
         >
           <img src={logoImg} alt="Emerald Euphoria" className="w-full h-full object-contain" />
         </Link>

@@ -36,7 +36,7 @@ export default function HeroSection() {
                             <h1 className="font-['Montserrat'] font-black text-[40px] md:text-[70px] leading-[0.9] tracking-[-0.02em] uppercase text-white">
                                 <span className="block text-[24px] sm:text-[40px] md:text-[70px] font-extrabold sm:font-black leading-[0.9] tracking-[-0.02em] text-center lg:text-left mb-6 lg:mb-0">WELCOME TO</span>
                                 <span
-                                    className="block -mt-1 sm:mt-0 text-transparent bg-clip-text drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] whitespace-normal lg:whitespace-nowrap"
+                                    className="block -mt-1 sm:mt-0 text-transparent bg-clip-text drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] whitespace-normal lg:whitespace-nowrap font-black text-[48px] sm:text-[70px] md:text-[70px]"
                                     style={{
                                         backgroundImage:
                                             'linear-gradient(180deg, #68E203 10%, #C6FF94 40%, #68E203 50%, #C6FF94 60%, #68E203 100%)',

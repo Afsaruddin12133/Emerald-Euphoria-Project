@@ -91,20 +91,20 @@ export default function EarnRewardsSection() {
                         </div>
 
                         {/* Mobile View */}
-                        <div className="md:hidden w-full grid grid-cols-2 gap-x-3 gap-y-[70px] sm:gap-x-4 sm:gap-y-[70px] pt-[70px] pb-12">
+                        <div className="md:hidden w-full grid grid-cols-2 gap-x-12 gap-y-[65px] sm:gap-x-4 sm:gap-y-[65px] pt-[60px] pb-12 justify-items-center">
                             {cards.map((c, i) => (
                                 <motion.div 
                                     key={c.title} 
-                                    className="w-full h-full" 
+                                    className="w-[180px] h-[130px]" 
                                     initial={{ opacity: 0, y: 18 }} 
                                     whileInView={{ opacity: 1, y: 0 }} 
                                     viewport={{ once: true }} 
                                     transition={{ delay: i * 0.06 }}
                                 >
-                                    <div className="rounded-[20px] relative w-full h-full min-h-[180px] flex flex-col items-center text-center px-2 pb-4" style={{ border: '1px solid #1f202f', background: `linear-gradient(180deg, ${c.bgTop} 0%, #161723 60%)` }}>
+                                    <div className="rounded-[20px] relative w-[180px] h-[130px] flex flex-col items-center text-center px-2 pb-3" style={{ border: '1px solid #1f202f', background: `linear-gradient(180deg, ${c.bgTop} 0%, #161723 60%)` }}>
                                         {/* Glowing Circle behind Icon */}
-                                        <div className="absolute pointer-events-none left-1/2 -translate-x-1/2" style={{ top: -55, width: 100, height: 100 }}>
-                                            <div className="absolute top-[75%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full" style={{ background: c.bgTop.replace('0.4', '0.7'), filter: 'blur(15px)', opacity: 1 }} />
+                                        <div className="absolute pointer-events-none left-1/2 -translate-x-1/2" style={{ top: -32, width: 60, height: 60 }}>
+                                            <div className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55px] h-[55px] rounded-full" style={{ background: c.bgTop.replace('0.4', '0.7'), filter: 'blur(12px)', opacity: 1 }} />
                                         </div>
                                         
                                         <motion.img 
@@ -112,9 +112,9 @@ export default function EarnRewardsSection() {
                                             alt={c.title.replace('\n', ' ')} 
                                             className="absolute pointer-events-none left-1/2 -translate-x-1/2" 
                                             style={{ 
-                                                width: c.img === micImg ? 180 : 130, 
-                                                height: c.img === micImg ? 150 : 110, 
-                                                top: c.img === micImg ? -75 : -55, 
+                                                width: c.img === micImg ? 100 : 80, 
+                                                height: c.img === micImg ? 85 : 80, 
+                                                top: c.img === micImg ? -46 : -42, 
                                                 filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' 
                                             }} 
                                             initial={{ y: -4 }} 
@@ -122,9 +122,9 @@ export default function EarnRewardsSection() {
                                             transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }} 
                                         />
                                         
-                                        <div className="mt-[65px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[15px] sm:text-[18px] leading-[1.2] mb-[6px] h-[45px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
+                                        <div className="mt-[56px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[13px] leading-[1.2] mb-[4px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[10px] leading-[1.2] text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>

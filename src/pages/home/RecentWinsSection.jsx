@@ -58,10 +58,27 @@ function RecentWinsMarquee() {
 
     return (
         <div ref={ref} className="relative w-full overflow-x-hidden" style={{ padding: '14px' }}>
-            <div className="marquee-inner flex items-center gap-6 flex-nowrap" style={{ whiteSpace: 'nowrap' }}>
+            <div className="marquee-inner flex items-center gap-3 md:gap-6 flex-nowrap" style={{ whiteSpace: 'nowrap' }}>
                 {[...RECENT_WINS_DATA, ...RECENT_WINS_DATA].map((win, idx) => (
-                    <div key={`${win.id}-${idx}`} className="flex flex-col items-center justify-center cursor-pointer group" style={{ flex: '0 0 85px', height: '138px' }}>
-                        <div className="w-[85px] h-[85px] rounded-[10px]  mb-[10px] transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(104,226,3,0.3)]">
+                    <div key={`${win.id}-${idx}`} className="flex flex-col items-center justify-center cursor-pointer group md:hidden" style={{ flex: '0 0 68px', height: '118px' }}>
+                        <div className="w-[68px] h-[68px] rounded-[8px] mb-[8px] transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(104,226,3,0.3)]">
+                            <img src={win.image} alt="Game" className="w-full h-full object-cover rounded-[8px]" />
+                        </div>
+                        <div className="text-[#556761] text-[11px] font-['Montserrat'] font-bold leading-none tracking-[-0.02em] mb-[5px] group-hover:text-white transition-colors duration-300">
+                            {win.user}
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="relative w-[12px] h-[12px] flex items-center justify-center top-[-1px]">
+                                <div className="absolute -bottom-[3px] w-[10px] h-[5px] bg-[#FFAB00] rounded-full blur-[4px] opacity-100" />
+                                <img src={coinImg} alt="Coin" className="w-full h-full relative z-10" />
+                            </div>
+                            <span className="text-white text-[11px] font-['Montserrat'] font-bold tracking-wide">{win.amount}</span>
+                        </div>
+                    </div>
+                ))}
+                {[...RECENT_WINS_DATA, ...RECENT_WINS_DATA].map((win, idx) => (
+                    <div key={`desktop-${win.id}-${idx}`} className="hidden md:flex flex-col items-center justify-center cursor-pointer group" style={{ flex: '0 0 85px', height: '138px' }}>
+                        <div className="w-[85px] h-[85px] rounded-[10px] mb-[10px] transition-transform duration-300 group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(104,226,3,0.3)]">
                             <img src={win.image} alt="Game" className="object-cover" />
                         </div>
                         <div className="text-[#556761] text-[14px] font-['Montserrat'] font-bold leading-none tracking-[-0.02em] mb-[6px] group-hover:text-white transition-colors duration-300">
@@ -69,7 +86,6 @@ function RecentWinsMarquee() {
                         </div>
                         <div className="flex items-center gap-1.5">
                             <div className="relative w-[14px] h-[14px] flex items-center justify-center top-[-1px]">
-                                {/* Golden glow specifically below the coin */}
                                 <div className="absolute -bottom-[3px] w-[12px] h-[6px] bg-[#FFAB00] rounded-full blur-[4px] opacity-100" />
                                 <img src={coinImg} alt="Coin" className="w-full h-full relative z-10" />
                             </div>
@@ -92,15 +108,15 @@ export default function RecentWinsSection() {
                 </div>
 
                 <div
-                    className="w-full h-[178px] overflow-hidden relative flex items-center"
+                    className="w-full h-[148px] md:h-[178px] overflow-hidden relative flex items-center"
                     style={{
                         background: 'var(--Shade-02, #051711)',
                         border: '1px solid var(--Shade-03, #0F211B)',
                         borderRadius: '20px'
                     }}
                 >
-                    <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#051711] to-transparent z-10 pointer-events-none rounded-l-[20px]" />
-                    <div className="absolute right-0 top-0 bottom-0 w-[120px] md:w-[200px] lg:w-[280px] bg-gradient-to-l from-[#051711] via-[#051711]/90 to-transparent z-10 pointer-events-none rounded-r-[20px]" />
+                    <div className="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-[#051711] to-transparent z-10 pointer-events-none rounded-l-[20px]" />
+                    <div className="absolute right-0 top-0 bottom-0 w-[60px] md:w-[200px] lg:w-[280px] bg-gradient-to-l from-[#051711] via-[#051711]/90 to-transparent z-10 pointer-events-none rounded-r-[20px]" />
                     <RecentWinsMarquee />
                 </div>
             </div>

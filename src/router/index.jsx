@@ -4,10 +4,10 @@ import { RootLayout } from '@/layouts/RootLayout'
 import { FullPageSpinner } from '@/components/ui'
 
 // ─── Lazy-loaded Pages (code splitting) ────────────────────────────────────────
-const HomePage      = lazy(() => import('@/pages/Home'))
-const AboutPage     = lazy(() => import('@/pages/About'))
+const HomePage = lazy(() => import('@/pages/Home'))
+const AboutPage = lazy(() => import('@/pages/About'))
 const PopupDemoPage = lazy(() => import('@/pages/PopupDemo'))
-const NotFoundPage  = lazy(() => import('@/pages/NotFound'))
+const NotFoundPage = lazy(() => import('@/pages/NotFound'))
 
 // ─── Suspense Wrapper ──────────────────────────────────────────────────────────
 function SuspenseWrapper({ children }) {

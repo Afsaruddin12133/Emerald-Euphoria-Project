@@ -39,9 +39,9 @@ export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                         className="relative w-full md:w-fit max-w-[95vw] md:max-w-fit max-h-[95vh] md:max-h-[90vh] bg-[#0c1311] rounded-[24px] overflow-hidden flex flex-col md:flex-row shadow-2xl border border-white/5 my-auto z-10 mx-auto"
                     >
                         {/* Left Side (Image & Promo) */}
-                        <img 
-                            src={sideframeImg} 
-                            alt="Welcome to Emerald Euphoria" 
+                        <img
+                            src={sideframeImg}
+                            alt="Welcome to Emerald Euphoria"
                             className="hidden md:block w-auto self-stretch max-w-[260px] lg:max-w-[300px] object-cover shrink-0 bg-[#0a100e]"
                             style={{ objectPosition: 'top center' }}
                         />
@@ -141,9 +141,9 @@ export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
 
                                     <div className="flex items-start gap-3">
                                         <div className="flex items-center h-5 mt-[2px]">
-                                            <input 
-                                                type="checkbox" 
-                                                id="terms" 
+                                            <input
+                                                type="checkbox"
+                                                id="terms"
                                                 className="w-5 h-5 rounded-[4px] bg-[#16211e] border-transparent text-[#68E203] focus:ring-[#68E203] focus:ring-offset-0 focus:ring-1 cursor-pointer appearance-none checked:bg-[#68E203] checked:border-transparent relative after:content-[''] checked:after:block after:hidden after:absolute after:left-[6px] after:top-[2px] after:w-[6px] after:h-[10px] after:border-r-2 after:border-b-2 after:border-white after:rotate-45 transition-colors"
                                                 defaultChecked
                                             />
