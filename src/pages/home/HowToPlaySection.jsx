@@ -22,7 +22,7 @@ import visaImg from '@/assets/visa.png';
 
 // Rewards
 import chestImg from '@/assets/gemes box.png';
-import cloverImg from '@/assets/lucky.png'; // Fallback if it's not the exact clover
+import cloverImg from '@/assets/circal.png'; // Fallback if it's not the exact clover
 
 const GAMES = [
     goldenDragonImg,
@@ -80,8 +80,8 @@ export default function HowToPlaySection() {
             <div className="container-custom">
 
                 {/* Title */}
-                <div className="text-center mb-[40px] md:mb-[100px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[40px] sm:text-[40px] md:text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                <div className="text-center mb-[80px] md:mb-[100px]">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] md:drop-shadow-none [-webkit-text-stroke:1.5px_currentColor] md:[-webkit-text-stroke:0px]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white whitespace-nowrap">HOW TO PLAY IN</span>
                         <br />
                         <span className="text-[#68E203] whitespace-nowrap">3 EASY STEPS</span>
@@ -209,7 +209,7 @@ export default function HowToPlaySection() {
                                                 background: 'radial-gradient(50% 80% at 50% 0%, rgba(255,255,255,0.12) 0%, var(--Shade-03, #0F211B) 100%)'
                                             }}
                                         >
-                                            <img src={img} alt="Payment" className="w-full h-full object-contain opacity-90" />
+                                            <img src={img} alt="Payment" className={`object-contain opacity-90 ${idx === 1 || idx === 2 || idx === 3 ? 'w-[65%] h-[65%]' : 'w-full h-full'}`} />
                                         </div>
                                     ))}
                                 </div>

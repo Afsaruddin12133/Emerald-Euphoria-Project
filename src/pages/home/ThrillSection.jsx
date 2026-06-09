@@ -18,7 +18,7 @@ export default function ThrillSection() {
         <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
                 <div className="text-center mb-[80px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] md:drop-shadow-none [-webkit-text-stroke:1.5px_currentColor] md:[-webkit-text-stroke:0px]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">Discover The </span>
                         <span className="text-[#68E203]">Thrill</span>
                     </h2>
@@ -91,7 +91,7 @@ export default function ThrillSection() {
                                     <motion.img 
                                         src={c.img} 
                                         alt="icon" 
-                                        className="absolute right-[-5%] bottom-[-5%] w-[80px] h-[80px] sm:w-[130px] sm:h-[130px] pointer-events-none" 
+                                        className={`absolute right-[-5%] bottom-[-5%] pointer-events-none ${i === 1 || i === 2 ? 'w-[86px] h-[86px] sm:w-[136px] sm:h-[136px]' : 'w-[80px] h-[80px] sm:w-[130px] sm:h-[130px]'}`}  
                                         style={{ transform: 'rotate(-15deg)' }} 
                                         initial={{ y: -4 }} 
                                         animate={{ y: 4 }} 

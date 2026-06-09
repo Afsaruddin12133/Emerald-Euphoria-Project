@@ -60,8 +60,8 @@ export default function HeroSection() {
                         <motion.div variants={fadeInUp} className="mb-8 w-full flex flex-col items-center lg:items-start">
                             <h2 className="text-white font-['Montserrat'] font-bold text-[22px] leading-none tracking-normal mb-4">Register & Claim</h2>
 
-                            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-[10px] w-full mt-2">
-                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[46px] sm:pr-[54px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px]">
+                            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-[10px] w-full mt-2 ">
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[10px] sm:rounded-[12px] w-auto pr-[46px] sm:pr-[54px] h-[44px] sm:h-[48px] pl-[12px] sm:pl-[15px] mr-2">
                                     <span className="text-white font-['Montserrat'] font-bold text-[12px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10">100% Sign Up</span>
                                     <img
                                         src={gemesBoxImg}

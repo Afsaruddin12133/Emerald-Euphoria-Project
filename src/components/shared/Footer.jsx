@@ -90,7 +90,7 @@ export function Footer() {
 
                 {/* Mobile Top Section */}
                 <div className="flex md:hidden flex-col items-start text-left mb-12">
-                    <div className="mb-6">{logoElement}</div>
+                    <div className="mb-6 w-[80px] h-[80px]">{logoElement}</div>
                     <div className="mb-6 pr-4">{legalTextElement}</div>
                     <div className="mb-6">{socialsElement}</div>
                     <div>{copyrightElement}</div>

@@ -85,7 +85,7 @@ export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                                         <input
                                             type="text"
                                             placeholder="Enter full name"
-                                            className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-bold text-[15px] leading-none"
+                                            className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-normal text-[15px] leading-none"
                                             style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
                                         />
                                     </div>
@@ -98,7 +98,7 @@ export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                                     <input
                                         type="email"
                                         placeholder="Enter your e-mail"
-                                        className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-bold text-[15px] leading-none"
+                                        className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-normal text-[15px] leading-none"
                                         style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
                                     />
                                 </div>
@@ -111,7 +111,7 @@ export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                                         <input
                                             type="tel"
                                             placeholder="Enter phone number"
-                                            className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-bold text-[15px] leading-none"
+                                            className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-normal text-[15px] leading-none"
                                             style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
                                         />
                                     </div>
@@ -124,7 +124,7 @@ export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
                                     <input
                                         type="password"
                                         placeholder="Enter password"
-                                        className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-bold text-[15px] leading-none"
+                                        className="w-full h-[46px] bg-[#16211e] rounded-xl pl-11 pr-4 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[#68E203] border border-transparent transition-all font-['Montserrat'] font-normal text-[15px] leading-none"
                                         style={{ letterSpacing: '-0.02em', lineHeight: '1' }}
                                     />
                                 </div>

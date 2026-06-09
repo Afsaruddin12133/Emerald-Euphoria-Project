@@ -18,7 +18,7 @@ export default function JoinUsSection() {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-40px' }}
                     variants={revealUp}
-                    className="relative w-full max-w-[1280px] lg:h-[493px] mx-auto rounded-[30px] bg-gradient-to-r from-[#031c10] to-[#043319] sm:p-12 p-6 md:p-16 flex flex-col lg:flex-row items-center justify-between shadow-2xl"
+                    className="relative w-full max-w-[1280px] lg:h-[493px] mx-auto rounded-[30px] bg-gradient-to-r from-[#031c10] to-[#043319] sm:p-12 p-6 md:p-16 flex flex-col lg:flex-row items-center justify-between shadow-2xl overflow-hidden lg:overflow-visible"
                     style={{
                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255,255,255,0.05)'
                     }}
@@ -93,21 +93,15 @@ export default function JoinUsSection() {
                     </motion.div>
 
                     {/* Right Side Mascot & Assets */}
-                    <div className="relative w-full lg:w-auto flex justify-center items-center pointer-events-none mt-4 lg:mt-0 lg:static ">
+                    <div className="relative w-full h-[230px] lg:w-auto flex justify-center items-center pointer-events-none mt-4 lg:mt-0 lg:static ">
 
                         {/* Spacer for Mobile Height */}
-                        <div className="w-full h-[240px] sm:h-[280px] lg:hidden block" />
+                        <div className="w-full h-[380px] sm:h-[400px] lg:hidden block" />
 
-                        {/* Mobile Mascot — fades naturally at bottom via CSS mask, no hard clip visible */}
-                        <div
-                            className="absolute inset-x-0 bottom-0 top-[-100px] overflow-hidden pointer-events-none lg:hidden z-10"
-                            style={{
-                                WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
-                                maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)'
-                            }}
-                        >
+                        {/* Mobile Mascot — bottom-anchored, centered, full visible */}
+                        <div className="absolute inset-x-0 bottom-[-200px] top-0 pointer-events-none lg:hidden z-10">
                             <motion.div
-                                className="absolute bottom-[-140px] sm:bottom-[-120px] left-1/2 -translate-x-1/2 w-[280px] sm:w-[340px] top-12"
+                                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[285px] sm:w-[360px]"
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                             >
@@ -123,7 +117,7 @@ export default function JoinUsSection() {
                         <motion.img
                             src={coin1Img}
                             alt="Floating Coin 1"
-                            className="absolute lg:hidden z-20 w-[80px] sm:w-[80px] left-[-49px] sm:left-[20px] bottom-[-10px] sm:bottom-[30px]"
+                            className="absolute lg:hidden z-20 w-[80px] left-[-52px] bottom-[10px]"
                             animate={{ y: [0, -15, 0], rotate: [0, 15, -15, 0] }}
                             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                             style={{ filter: 'drop-shadow(0px 10px 15px rgba(0,0,0,0.5))' }}
@@ -131,7 +125,7 @@ export default function JoinUsSection() {
                         <motion.img
                             src={coin2Img}
                             alt="Floating Coin 2"
-                            className="absolute lg:hidden z-20 w-[90px] sm:w-[90px] right-[-49px] sm:right-[20px] bottom-[15px] sm:bottom-[25px]"
+                            className="absolute lg:hidden z-20 w-[100px] right-[-59px] bottom-[-10px]"
                             animate={{ y: [0, 20, 0], rotate: [0, -20, 20, 0] }}
                             transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                             style={{ filter: 'drop-shadow(0px 10px 15px rgba(0,0,0,0.5))' }}

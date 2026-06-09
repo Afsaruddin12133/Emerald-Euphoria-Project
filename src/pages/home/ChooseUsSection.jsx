@@ -36,8 +36,8 @@ export default function ChooseUsSection() {
     return (
         <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
-                <div className="text-center mb-[120px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                <div className="text-center mb-[80px] md:mb-[120px]">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] md:drop-shadow-none [-webkit-text-stroke:1.5px_currentColor] md:[-webkit-text-stroke:0px]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">WHY PLAYERS </span>
                         <br />
                         <span className="text-[#68E203]">CHOOSE US?</span>
@@ -106,15 +106,15 @@ export default function ChooseUsSection() {
                                             src={c.img}
                                             alt={c.title}
                                             className="absolute pointer-events-none left-1/2 -translate-x-1/2"
-                                            style={{ width: 75, height: 75, top: -38, filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' }}
+                                            style={{ width: 90, height: 90, top: -38, filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' }}
                                             initial={{ y: -4 }}
                                             animate={{ y: 4 }}
                                             transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }}
                                         />
 
-                                        <div className="mt-[55px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[13px] leading-[1.2] tracking-[-0.02em] text-center mb-[4px] flex items-center justify-center whitespace-pre-line w-full">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[10px] leading-tight text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
+                                        <div className="mt-[56px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[16px] leading-[1.2] tracking-[-0.02em] text-center mb-[4px] flex items-center justify-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[12px] leading-tight text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>

@@ -29,8 +29,8 @@ export default function TestimonialSection() {
             <div className="container-custom max-w-[1280px] mx-auto">
                 
                 {/* Title */}
-                <div className="text-center mb-[60px] md:mb-[80px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                <div className="text-center mb-[80px]">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] md:drop-shadow-none [-webkit-text-stroke:1.5px_currentColor] md:[-webkit-text-stroke:0px]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">TRUSTED BY</span>
                         <br />
                         <span className="text-[#68E203]">10,000+ PLAYERS</span>

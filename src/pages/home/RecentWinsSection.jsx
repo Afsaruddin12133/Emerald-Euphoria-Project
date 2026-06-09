@@ -38,7 +38,7 @@ function RecentWinsMarquee() {
         const step = (now) => {
             const dt = (now - lastTime) / 1000
             lastTime = now
-            
+
             el.scrollLeft += speed * dt
 
             const singleWidth = content.scrollWidth / 2
@@ -100,7 +100,7 @@ function RecentWinsMarquee() {
 
 export default function RecentWinsSection() {
     return (
-        <section className="w-full flex flex-col items-center justify-center py-12 lg:py-20 relative z-20">
+        <section className="w-full flex flex-col items-center justify-center py-12 lg:py-20 relative z-20 -mt-[80px] lg:-mt-0">
             <div className="container-custom w-full flex flex-col">
                 <div className="mb-4 flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-[#68E203] shadow-[0_0_8px_#68E203]" />

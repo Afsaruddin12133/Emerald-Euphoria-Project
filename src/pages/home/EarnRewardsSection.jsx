@@ -29,15 +29,15 @@ export default function EarnRewardsSection() {
             title: 'Festival Bonus', 
             desc: 'Enjoy exclusive\nmember benefits.', 
             img: giftBoxImg,
-            bgTop: 'rgba(50, 220, 50, 0.4)' // Green glow
+            bgTop: 'rgba(104, 226, 3, 0.25)' // Brand Green glow
         },
     ]
 
     return (
         <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
-                <div className="text-center mb-[140px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[44px] leading-[100%]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                <div className="text-center mb-[80px] md:mb-[140px]">
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] md:drop-shadow-none [-webkit-text-stroke:1.5px_currentColor] md:[-webkit-text-stroke:0px]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">EARN </span>
                         <span className="text-[#68E203]">REWARDS</span>
                     </h2>
@@ -58,7 +58,7 @@ export default function EarnRewardsSection() {
                                     viewport={{ once: true }} 
                                     transition={{ type: 'spring', stiffness: 140, damping: 18, duration: 0.6, delay: i * 0.08 }}
                                 >
-                                    <div className="rounded-[25px] relative w-full h-full flex flex-col items-center text-center px-4 pb-8" style={{ border: '1px solid #1f202f', background: `linear-gradient(180deg, ${c.bgTop} 0%, #161723 60%)` }}>
+                                    <div className="rounded-[25px] relative w-full h-full flex flex-col items-center text-center px-4 pb-8" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: `linear-gradient(180deg, ${c.bgTop} 0%, #051711 60%)` }}>
                                         {/* Glowing Circle behind Icon */}
                                         <div className="absolute pointer-events-none" style={{ left: 53, top: -90, width: 150, height: 150 }}>
                                             <div className="absolute top-[85%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] h-[110px] rounded-full" style={{ background: c.bgTop.replace('0.4', '0.7'), filter: 'blur(20px)', opacity: 1 }} />
@@ -101,7 +101,7 @@ export default function EarnRewardsSection() {
                                     viewport={{ once: true }} 
                                     transition={{ delay: i * 0.06 }}
                                 >
-                                    <div className="rounded-[20px] relative w-[180px] h-[130px] flex flex-col items-center text-center px-2 pb-3" style={{ border: '1px solid #1f202f', background: `linear-gradient(180deg, ${c.bgTop} 0%, #161723 60%)` }}>
+                                    <div className="rounded-[20px] relative w-[180px] h-[130px] flex flex-col items-center text-center px-2 pb-3" style={{ border: '1px solid var(--Shade-03, #0F211B)', background: `linear-gradient(180deg, ${c.bgTop} 0%, #051711 60%)` }}>
                                         {/* Glowing Circle behind Icon */}
                                         <div className="absolute pointer-events-none left-1/2 -translate-x-1/2" style={{ top: -32, width: 60, height: 60 }}>
                                             <div className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55px] h-[55px] rounded-full" style={{ background: c.bgTop.replace('0.4', '0.7'), filter: 'blur(12px)', opacity: 1 }} />
@@ -112,9 +112,9 @@ export default function EarnRewardsSection() {
                                             alt={c.title.replace('\n', ' ')} 
                                             className="absolute pointer-events-none left-1/2 -translate-x-1/2" 
                                             style={{ 
-                                                width: c.img === micImg ? 100 : 80, 
-                                                height: c.img === micImg ? 85 : 80, 
-                                                top: c.img === micImg ? -46 : -42, 
+                                                width: c.img === micImg ? 168 : c.img === moneyBagImg ? 105 : c.img === giftBoxImg ? 100 : 80, 
+                                                height: c.img === micImg ? 89 : c.img === moneyBagImg ? 95 : c.img === giftBoxImg ? 90 : 80, 
+                                                top: c.img === micImg ? -48 : c.img === moneyBagImg ? -48 : c.img === giftBoxImg ? -46 : -42, 
                                                 filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' 
                                             }} 
                                             initial={{ y: -4 }} 
@@ -122,9 +122,9 @@ export default function EarnRewardsSection() {
                                             transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }} 
                                         />
                                         
-                                        <div className="mt-[56px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
-                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[13px] leading-[1.2] mb-[4px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
-                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[10px] leading-[1.2] text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
+                                        <div className="mt-[53px] flex-1 flex flex-col items-center justify-start relative z-10 w-full">
+                                            <h3 className="text-[#FFFFFF] font-['Montserrat'] font-bold text-[16px] leading-[1.2] mb-[4px] flex items-center justify-center text-center whitespace-pre-line w-full">{c.title}</h3>
+                                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[12px] leading-[1.2] text-center whitespace-pre-line px-1 w-full">{c.desc}</p>
                                         </div>
                                     </div>
                                 </motion.div>

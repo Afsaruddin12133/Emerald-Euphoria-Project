@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { Navbar } from '@/components/shared/Navbar'
 import { Footer } from '@/components/shared/Footer'
-import { ScrollToTop } from '@/components/shared/ScrollToTop'
+import { ChatButton } from '@/components/shared/ChatButton'
 import OfferPopup from '@/components/shared/OfferPopup'
 
 /**
@@ -15,7 +15,7 @@ export function RootLayout() {
         <Outlet />
       </div>
       <Footer />
-      <ScrollToTop />
+      <ChatButton />
       <OfferPopup />
     </div>
   )
