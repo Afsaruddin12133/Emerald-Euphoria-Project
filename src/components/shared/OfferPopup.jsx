@@ -41,12 +41,12 @@ export default function OfferPopup() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                        className="relative inline-block mx-4 max-w-[95vw]"
+                        className="relative w-full max-w-[500px] mx-4 flex flex-col items-center justify-center"
                     >
                         <img
                             src={popupImg}
                             alt="Special Offer"
-                            className="w-full h-auto max-w-[500px] max-h-[85vh] object-contain cursor-pointer drop-shadow-[0_10px_40px_rgba(104,226,3,0.2)]"
+                            className="w-full h-auto max-h-[85vh] object-contain cursor-pointer drop-shadow-[0_10px_40px_rgba(104,226,3,0.2)]"
                             onClick={handleClaim}
                         />
 
