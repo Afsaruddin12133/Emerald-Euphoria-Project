@@ -132,16 +132,16 @@ export default function JoinUsSection() {
                         />
 
                         {/* Mascot Image (Desktop with Bottom Clip) */}
-                        <div className="hidden lg:block absolute inset-x-0 bottom-0 top-[-70px] pointer-events-none overflow-hidden z-10 rounded-b-[30px]">
+                        <div className="hidden lg:block absolute inset-x-0 bottom-0 top-[-55px] pointer-events-none overflow-hidden z-10 rounded-b-[30px]">
                             <motion.div
-                                className="absolute w-[680px] h-[800px] top-[50px] left-[530px] lg:max-w-none lg:-translate-y-0"
+                                className="absolute w-[710px] h-[710px] top-[50px] left-[400px] lg:max-w-none lg:-translate-y-0"
                                 animate={{ y: [0, -12, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                             >
                                 <img
                                     src={mascotImg}
                                     alt="Leprechaun Mascot"
-                                    className="w-full h-full object-contain drop-shadow-2xl"
+                                    className="w-[650px] h-[680px] object-contain drop-shadow-2xl"
                                 />
                             </motion.div>
                         </div>

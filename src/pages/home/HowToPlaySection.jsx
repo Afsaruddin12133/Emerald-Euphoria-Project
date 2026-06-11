@@ -81,7 +81,7 @@ export default function HowToPlaySection() {
 
                 {/* Title */}
                 <div className="text-center mb-[80px] md:mb-[100px]">
-                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] md:drop-shadow-none [-webkit-text-stroke:1.5px_currentColor] md:[-webkit-text-stroke:0px]" style={{ letterSpacing: '0', lineHeight: '1' }}>
+                    <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] [-webkit-text-stroke:1.5px_currentColor]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white whitespace-nowrap">HOW TO PLAY IN</span>
                         <br />
                         <span className="text-[#68E203] whitespace-nowrap">3 EASY STEPS</span>
@@ -92,7 +92,7 @@ export default function HowToPlaySection() {
                 <div className="w-full max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[40px] lg:gap-0">
 
                     {/* Left Side: Mascot */}
-                    <div className="hidden lg:flex w-full lg:w-[600px] justify-center lg:justify-start lg:-ml-[50px] relative pointer-events-none">
+                    <div className="hidden lg:flex w-full lg:w-[600px] justify-center lg:justify-start lg:-ml-[50px] pointer-events-none sticky top-[120px] h-fit z-0">
                         <motion.img
                             src={mascotImg}
                             alt="Mascot"
@@ -113,8 +113,9 @@ export default function HowToPlaySection() {
                     <div className="w-full lg:w-[640px] flex flex-col gap-[20px]">
 
                         {/* Step 1 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-                            <BlockContainer>
+                        <div className="sticky top-[80px] lg:top-[120px] z-10 transition-transform duration-500">
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+                                <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[22px] leading-none tracking-normal mb-1">Register & Claim</h3>
                                 <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Sign Up today & unlock instant rewards.</p>
 
@@ -148,11 +149,13 @@ export default function HowToPlaySection() {
 
                                 <ClaimButton />
                             </BlockContainer>
-                        </motion.div>
+                            </motion.div>
+                        </div>
 
                         {/* Step 2 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-                            <BlockContainer>
+                        <div className="sticky top-[100px] lg:top-[140px] z-20 transition-transform duration-500">
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+                                <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Play your favorite games</h3>
                                 <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Unlimited fun with top casino games.</p>
 
@@ -176,11 +179,13 @@ export default function HowToPlaySection() {
 
                                 <ClaimButton />
                             </BlockContainer>
-                        </motion.div>
+                            </motion.div>
+                        </div>
 
                         {/* Step 3 */}
-                        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
-                            <BlockContainer>
+                        <div className="sticky top-[120px] lg:top-[160px] z-30 transition-transform duration-500">
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
+                                <BlockContainer>
                                 <h3 className="text-white font-['Montserrat'] font-bold text-[24px] mb-1">Withdrawal immediately</h3>
                                 <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-none tracking-normal mb-[24px]">Fast withdrawals always, better experience.</p>
 
@@ -216,7 +221,8 @@ export default function HowToPlaySection() {
 
                                 <ClaimButton />
                             </BlockContainer>
-                        </motion.div>
+                            </motion.div>
+                        </div>
 
                     </div>
                 </div>
