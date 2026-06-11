@@ -64,7 +64,7 @@ export default function OfferPopup() {
                         <div className="absolute bottom-[18%] left-1/2 -translate-x-1/2 z-10">
                             <button
                                 onClick={handleClaim}
-                                className="cursor-pointer inline-flex items-center justify-center h-[44px] md:h-[48px] px-8 md:px-10 rounded-[12px] md:rounded-[14px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[16px] md:text-[18px] leading-none tracking-[-0.02em] hover:scale-105 transition-all shadow-[0_8px_30px_rgba(104,226,3,0.3)] whitespace-nowrap"
+                                className="cursor-pointer inline-flex items-center justify-center h-[36px] md:h-[48px] px-6 md:px-10 rounded-[10px] md:rounded-[14px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] md:text-[18px] leading-none tracking-[-0.02em] hover:scale-105 transition-all shadow-[0_8px_30px_rgba(104,226,3,0.3)] whitespace-nowrap"
                             >
                                 Claim Now
                             </button>
