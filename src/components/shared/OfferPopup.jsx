@@ -46,7 +46,7 @@ export default function OfferPopup() {
                         <img
                             src={popupImg}
                             alt="Special Offer"
-                            className="w-auto h-auto max-w-[500px] max-h-[85vh] object-contain cursor-pointer drop-shadow-[0_10px_40px_rgba(104,226,3,0.2)]"
+                            className="w-full h-auto max-w-[500px] max-h-[85vh] object-contain cursor-pointer drop-shadow-[0_10px_40px_rgba(104,226,3,0.2)]"
                             onClick={handleClaim}
                         />
 
@@ -55,7 +55,7 @@ export default function OfferPopup() {
                                 e.stopPropagation();
                                 setIsOpen(false);
                             }}
-                            className="absolute top-26 right-26 z-20 w-8 h-8 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-[#68E203] hover:text-black hover:border-transparent transition-all shadow-lg"
+                            className="absolute top-[12%] right-[12%] md:top-[15%] md:right-[15%] z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-[#68E203] hover:text-black hover:border-transparent transition-all shadow-lg"
                         >
                             <X size={18} />
                         </button>
