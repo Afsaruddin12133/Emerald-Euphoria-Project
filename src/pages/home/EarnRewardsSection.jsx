@@ -69,10 +69,10 @@ export default function EarnRewardsSection() {
                                             alt={c.title.replace('\n', ' ')} 
                                             className="absolute pointer-events-none" 
                                             style={{ 
-                                                width: c.img === micImg ? 190 : 185, 
-                                                height: c.img === micImg ? 180 : 175, 
+                                                width: c.img === micImg ? 185 : 185, 
+                                                height: c.img === micImg ? 175 : 175, 
                                                 left: c.img === micImg ? 35 : 53, 
-                                                top: c.img === micImg ? -100 : -90, 
+                                                top: c.img === micImg ? -96 : -90, 
                                                 filter: 'drop-shadow(0px 4px 40px rgba(0,0,0,0.25))' 
                                             }} 
                                             initial={{ y: -6 }} 
@@ -112,9 +112,9 @@ export default function EarnRewardsSection() {
                                             alt={c.title.replace('\n', ' ')} 
                                             className="absolute pointer-events-none left-1/2 -translate-x-1/2" 
                                             style={{ 
-                                                width: c.img === micImg ? 105 : c.img === moneyBagImg ? 105 : c.img === giftBoxImg ? 100 : 80, 
-                                                height: c.img === micImg ? 89 : c.img === moneyBagImg ? 95 : c.img === giftBoxImg ? 90 : 80, 
-                                                top: c.img === micImg ? -48 : c.img === moneyBagImg ? -48 : c.img === giftBoxImg ? -46 : -42, 
+                                                width: c.img === micImg ? 100 : c.img === moneyBagImg ? 109 : c.img === giftBoxImg ? 100 : 80, 
+                                                height: c.img === micImg ? 83 : c.img === moneyBagImg ? 98 : c.img === giftBoxImg ? 90 : 80, 
+                                                top: c.img === micImg ? -44 : c.img === moneyBagImg ? -48 : c.img === giftBoxImg ? -46 : -42, 
                                                 filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' 
                                             }} 
                                             initial={{ y: -4 }} 
