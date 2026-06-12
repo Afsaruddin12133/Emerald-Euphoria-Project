@@ -181,7 +181,7 @@ export default function TrustedPlatformsSection() {
     return (
         <section className="w-full py-12 lg:py-20 relative z-20">
             <div className="container-custom">
-                <div className="text-center mb-[80px] md:mb-10">
+                <div className="text-center mb-[40px] md:mb-10">
                     <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] [-webkit-text-stroke:1.5px_currentColor]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">TRUSTED </span>
                         <span className="text-[#68E203]">PLATFORMS</span>

@@ -58,7 +58,7 @@ export default function JoinUsSection() {
                             <h3 className="text-white font-['Montserrat'] font-bold text-[22px] leading-none tracking-normal mb-4">Register & Claim</h3>
 
                             <div className="flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-6 w-full max-w-[500px]">
-                                <div className="relative flex items-center bg-[#0F211B] rounded-[8px] sm:rounded-[12px] w-auto sm:w-[175px] h-[36px] sm:h-[48px] pl-[10px] sm:pl-[15px] pr-[38px] sm:pr-0 border border-white/5 mr-0 sm:mr-2">
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[8px] sm:rounded-[12px] w-auto sm:w-[175px] h-[36px] sm:h-[48px] pl-[10px] sm:pl-[15px] pr-[38px] sm:pr-0 border border-white/5 lg:mr-[-10px] sm:mr-2">
                                     <span className="text-white font-['Montserrat'] font-bold text-[10px] min-[375px]:text-[11px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10 pr-0 sm:pr-[20px]">100% Sign Up</span>
                                     <img
                                         src={gemesBoxImg}
@@ -70,7 +70,7 @@ export default function JoinUsSection() {
 
                                 <span className="text-white font-bold text-xl sm:text-3xl px-1 sm:px-2 leading-none z-10 block mt-[-4px]">+</span>
 
-                                <div className="relative flex items-center bg-[#0F211B] rounded-[8px] sm:rounded-[12px] w-auto sm:w-[189px] h-[36px] sm:h-[48px] pl-[10px] sm:pl-[15px] pr-[38px] sm:pr-0 border border-white/5 ml-0 sm:ml-2">
+                                <div className="relative flex items-center bg-[#0F211B] rounded-[8px] sm:rounded-[12px] w-auto sm:w-[189px] h-[36px] sm:h-[48px] pl-[10px] sm:pl-[15px] pr-[38px] sm:pr-0 border border-white/5 ml-0 sm:ml-2 lg:ml-[-10px]">
                                     <span className="text-white font-['Montserrat'] font-bold text-[10px] min-[375px]:text-[11px] sm:text-[14px] leading-none tracking-normal whitespace-nowrap z-10 pr-0 sm:pr-[20px]">20% All Deposit</span>
                                     <img
                                         src={circalImg}
@@ -134,14 +134,14 @@ export default function JoinUsSection() {
                         {/* Mascot Image (Desktop with Bottom Clip) */}
                         <div className="hidden lg:block absolute inset-x-0 bottom-0 top-[-55px] pointer-events-none overflow-hidden z-10 rounded-b-[30px]">
                             <motion.div
-                                className="absolute w-[710px] h-[710px] top-[50px] left-[400px] lg:max-w-none lg:-translate-y-0"
+                                className="absolute lg:w-full lg:h-full lg:top-[50px] lg:left-[500px]  lg:-translate-y-0"
                                 animate={{ y: [0, -12, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                             >
                                 <img
                                     src={mascotImg}
                                     alt="Leprechaun Mascot"
-                                    className="w-[650px] h-[680px] object-contain drop-shadow-2xl"
+                                    className="w-[750px] h-[780px] object-contain drop-shadow-2xl"
                                 />
                             </motion.div>
                         </div>

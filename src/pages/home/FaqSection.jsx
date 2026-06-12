@@ -75,7 +75,7 @@ export default function FaqSection() {
             <div className="container-custom max-w-[1280px] mx-auto">
                 
                 {/* Title */}
-                <div className="text-center mb-[80px]">
+                <div className="text-center mb-[40px] lg:mb-[80px]">
                     <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] [-webkit-text-stroke:1.5px_currentColor]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">FREQUENTLY ASKED </span>
                         <br />

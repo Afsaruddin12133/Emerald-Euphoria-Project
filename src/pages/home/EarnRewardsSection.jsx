@@ -36,7 +36,7 @@ export default function EarnRewardsSection() {
     return (
         <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
-                <div className="text-center mb-[80px] md:mb-[140px]">
+                <div className="text-center mb-[40px] md:mb-[150px]">
                     <h2 className="font-['Montserrat'] uppercase font-black text-[30px] md:text-[44px] leading-[100%] drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] [-webkit-text-stroke:1.5px_currentColor]" style={{ letterSpacing: '0', lineHeight: '1' }}>
                         <span className="text-white">EARN </span>
                         <span className="text-[#68E203]">REWARDS</span>
@@ -69,10 +69,10 @@ export default function EarnRewardsSection() {
                                             alt={c.title.replace('\n', ' ')} 
                                             className="absolute pointer-events-none" 
                                             style={{ 
-                                                width: c.img === micImg ? 300 : 185, 
-                                                height: c.img === micImg ? 200 : 175, 
-                                                left: c.img === micImg ? 25 : 53, 
-                                                top: c.img === micImg ? -110 : -90, 
+                                                width: c.img === micImg ? 190 : 185, 
+                                                height: c.img === micImg ? 180 : 175, 
+                                                left: c.img === micImg ? 35 : 53, 
+                                                top: c.img === micImg ? -100 : -90, 
                                                 filter: 'drop-shadow(0px 4px 40px rgba(0,0,0,0.25))' 
                                             }} 
                                             initial={{ y: -6 }} 
@@ -112,7 +112,7 @@ export default function EarnRewardsSection() {
                                             alt={c.title.replace('\n', ' ')} 
                                             className="absolute pointer-events-none left-1/2 -translate-x-1/2" 
                                             style={{ 
-                                                width: c.img === micImg ? 168 : c.img === moneyBagImg ? 105 : c.img === giftBoxImg ? 100 : 80, 
+                                                width: c.img === micImg ? 105 : c.img === moneyBagImg ? 105 : c.img === giftBoxImg ? 100 : 80, 
                                                 height: c.img === micImg ? 89 : c.img === moneyBagImg ? 95 : c.img === giftBoxImg ? 90 : 80, 
                                                 top: c.img === micImg ? -48 : c.img === moneyBagImg ? -48 : c.img === giftBoxImg ? -46 : -42, 
                                                 filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' 

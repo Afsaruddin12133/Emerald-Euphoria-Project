@@ -50,21 +50,54 @@ export default function OfferPopup() {
                             onClick={handleClaim}
                         />
 
+                        {/* Special Offer Text positioned overlaying the image */}
+                        <div className="absolute md:top-[4%] top-[4%] sm:top-[12%] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center pointer-events-none w-full px-4">
+                            <h2
+                                className="font-['Montserrat'] font-black text-[45px] sm:text-[56px] text-center uppercase m-0 p-0 -webkit-text-stroke: 1.5px #68E203 drop-shadow-[0_4px_2px_rgba(0,0,0,0.9)] leading-[100%] tracking-[-0.09em]"
+                                style={{
+                                    background: 'linear-gradient(180deg, #68E203 0%, #C6FF94 20%, #68E203 50%, #C6FF94 80%, #68E203 100%)',
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    backgroundClip: 'text',
+                                    color: 'transparent',
+                                    WebkitTextStroke: '1.5px black',
+                                    filter: 'drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5))',
+                                    width: '100%',
+                                    maxWidth: '275px',
+                                    letterSpacing: '0%',
+                                    lineHeight: '1'
+                                }}
+                            >
+                                Special Offer
+                            </h2>
+                            <p
+                                className="font-['Montserrat'] font-extrabold text-[18px] sm:text-[22px] leading-[0.9] text-center uppercase text-white m-0 p-0 mt-3 sm:mt-5"
+                                style={{
+                                    filter: 'drop-shadow(4px 2px 10px rgba(0, 0, 0, 0.5))',
+                                    letterSpacing: '-2%',
+                                    width: '100%',
+                                    maxWidth: '275px'
+                                }}
+                            >
+                                Get 20 Coins for $10
+                            </p>
+                        </div>
+
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
                                 setIsOpen(false);
                             }}
-                            className="absolute top-[12%] right-[12%] md:top-[15%] md:right-[15%] z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-[#68E203] hover:text-black hover:border-transparent transition-all shadow-lg"
+                            className="absolute top-[-5px] right-[0px] lg:top-[-5px] lg:right-[50px] md:top-[15%] md:right-[15%] z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/80 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-[#68E203] hover:text-black hover:border-transparent transition-all shadow-lg cursor-pointer"
                         >
                             <X size={18} />
                         </button>
-                        
+
                         {/* Claim Now button positioned overlaying the image */}
-                        <div className="absolute bottom-[18%] left-1/2 -translate-x-1/2 z-10">
+                        <div className="absolute bottom-[5%] left-1/2 -translate-x-1/2 z-10">
                             <button
                                 onClick={handleClaim}
-                                className="cursor-pointer inline-flex items-center justify-center h-[36px] md:h-[48px] px-6 md:px-10 rounded-[10px] md:rounded-[14px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] md:text-[18px] leading-none tracking-[-0.02em] hover:scale-105 transition-all shadow-[0_8px_30px_rgba(104,226,3,0.3)] whitespace-nowrap"
+                                className="cursor-pointer inline-flex items-center justify-center h-[36px] md:h-[48px] md:w-[125px] px-6 md:px-8 rounded-[10px] md:rounded-[14px] bg-gradient-to-r from-[#107015] to-[#68E203] text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] md:text-[18px] leading-none tracking-[-0.02em] hover:scale-105 transition-all shadow-[0_8px_30px_rgba(104,226,3,0.3)] whitespace-nowrap"
                             >
                                 Claim Now
                             </button>
