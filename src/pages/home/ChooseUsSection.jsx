@@ -69,7 +69,13 @@ export default function ChooseUsSection() {
                                             src={c.img}
                                             alt={c.title}
                                             className="absolute pointer-events-none"
-                                            style={{ width: 180, height: 180, left: 53, top: -90, filter: 'drop-shadow(0px 0px 40px rgba(0,0,0,0.25))' }}
+                                            style={{ 
+                                                width: c.title === 'VIP Club' ? 165 : 180, 
+                                                height: c.title === 'VIP Club' ? 165 : 180, 
+                                                left: c.title === 'VIP Club' ? 60.5 : 53, 
+                                                top: c.title === 'VIP Club' ? -82.5 : -90, 
+                                                filter: 'drop-shadow(0px 0px 40px rgba(0,0,0,0.25))' 
+                                            }}
                                             initial={{ y: -6 }}
                                             animate={{ y: 6 }}
                                             transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }}
@@ -106,7 +112,12 @@ export default function ChooseUsSection() {
                                             src={c.img}
                                             alt={c.title}
                                             className="absolute pointer-events-none left-1/2 -translate-x-1/2"
-                                            style={{ width: 90, height: 90, top: -38, filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' }}
+                                            style={{ 
+                                                width: c.title === 'VIP Club' ? 75 : 90, 
+                                                height: c.title === 'VIP Club' ? 75 : 90, 
+                                                top: c.title === 'VIP Club' ? -30.5 : -38, 
+                                                filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.25))' 
+                                            }}
                                             initial={{ y: -4 }}
                                             animate={{ y: 4 }}
                                             transition={{ y: { duration: 3, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut', delay: i * 0.2 } }}
