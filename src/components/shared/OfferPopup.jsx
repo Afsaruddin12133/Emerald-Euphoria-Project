@@ -4,10 +4,17 @@ import { X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * OfferPopup Component
+ * Renders an overlay popup containing a special promotional offer.
+ * The popup triggers automatically 2 seconds after the user loads the application,
+ * provided they have not already seen it in their current browser session.
+ */
 export default function OfferPopup() {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
 
+    // Trigger popup on initial mount if not previously shown in the current session
     useEffect(() => {
         const hasSeen = sessionStorage.getItem('hasSeenOfferPopup');
         if (!hasSeen) {

@@ -9,6 +9,15 @@ import coin2Img from '@/assets/coin2.png';
 import gemesBoxImg from '@/assets/gemes box.png';
 import mascotImg from '@/assets/muscot.png';
 
+/**
+ * JoinUsSection Component
+ * Renders the Call-to-Action section near the footer.
+ * Features a split layout with text/promotions on the left and a 3D Leprechaun mascot on the right.
+ * Layout variations:
+ * - Desktop: Mascot is absolute positioned and overlaps the right edge of the card container.
+ * - Mobile: Mascot is centered and bottom-aligned to ensure visual visibility on smaller viewports.
+ * Floating coins use independent Framer Motion keyframe loops for dynamic hover/float effects.
+ */
 export default function JoinUsSection() {
     return (
         <section className="section py-12 lg:py-20 overflow-x-hidden" id="join-us">

@@ -3,15 +3,17 @@ import googleImg from '@/assets/google.png';
 import sideframeImg from '@/assets/sideframe.png';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Lock, Mail, Phone, User, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
 export function AuthModal({ isOpen, onClose, initialMode = 'signup' }) {
     const [mode, setMode] = useState(initialMode);
+    const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
 
-    useEffect(() => {
+    if (isOpen !== prevIsOpen) {
+        setPrevIsOpen(isOpen);
         setMode(initialMode);
-    }, [initialMode, isOpen]);
+    }
 
     if (!isOpen) return null;
 

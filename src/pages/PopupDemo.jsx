@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   X, Bell, CheckCircle2, AlertTriangle, Info,
@@ -7,7 +7,7 @@ import {
 import { Button, Badge, Card } from '@/components/ui'
 import { PageWrapper } from '@/components/shared/PageWrapper'
 import {
-  fadeInUp, staggerContainer, scaleInBounce, ease
+  fadeInUp, staggerContainer
 } from '@/lib/animations'
 
 // ─── Popup Variants ────────────────────────────────────────────────────────────
@@ -104,11 +104,13 @@ export default function PopupDemo() {
   const [activePopup, setActivePopup] = useState(null)
   const [toasts, setToasts] = useState([])
   const [banner, setBanner] = useState(false)
+  const toastIdRef = useRef(0)
 
   const openPopup = (id) => {
     if (id.startsWith('toast-')) {
       const type = id.replace('toast-', '')
-      const toast = { id: Date.now(), type }
+      toastIdRef.current += 1
+      const toast = { id: toastIdRef.current, type }
       setToasts((prev) => [...prev, toast])
       setTimeout(() => {
         setToasts((prev) => prev.filter((t) => t.id !== toast.id))

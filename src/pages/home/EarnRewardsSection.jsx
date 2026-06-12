@@ -5,34 +5,44 @@ import micImg from '@/assets/mic.png';
 import moneyImg from '@/assets/money.png';
 import giftBoxImg from '@/assets/giftbox.png';
 
-export default function EarnRewardsSection() {
-    const cards = [
-        { 
-            title: 'First Deposit\nBonus', 
-            desc: 'Redeem your winnings\nfaster.', 
-            img: moneyBagImg,
-            bgTop: 'rgba(255, 120, 30, 0.4)' // Orange glow
-        },
-        { 
-            title: 'Referral Bonus', 
-            desc: 'Fast, friendly, and reliable\nsupport 24/7.', 
-            img: micImg,
-            bgTop: 'rgba(30, 150, 255, 0.4)' // Blue glow
-        },
-        { 
-            title: 'Daily Deposits', 
-            desc: 'Fast, friendly, and reliable\nsupport 24/7.', 
-            img: moneyImg,
-            bgTop: 'rgba(160, 60, 255, 0.4)' // Purple glow
-        },
-        { 
-            title: 'Festival Bonus', 
-            desc: 'Enjoy exclusive\nmember benefits.', 
-            img: giftBoxImg,
-            bgTop: 'rgba(104, 226, 3, 0.25)' // Brand Green glow
-        },
-    ]
+/**
+ * Configuration array representing the reward cards.
+ * Extracted to the module level to optimize render performance and avoid array re-allocations on every render.
+ */
+const EARN_REWARDS_CARDS = [
+    { 
+        title: 'First Deposit\nBonus', 
+        desc: 'Redeem your winnings\nfaster.', 
+        img: moneyBagImg,
+        bgTop: 'rgba(255, 120, 30, 0.4)' // Orange glow
+    },
+    { 
+        title: 'Referral Bonus', 
+        desc: 'Fast, friendly, and reliable\nsupport 24/7.', 
+        img: micImg,
+        bgTop: 'rgba(30, 150, 255, 0.4)' // Blue glow
+    },
+    { 
+        title: 'Daily Deposits', 
+        desc: 'Fast, friendly, and reliable\nsupport 24/7.', 
+        img: moneyImg,
+        bgTop: 'rgba(160, 60, 255, 0.4)' // Purple glow
+    },
+    { 
+        title: 'Festival Bonus', 
+        desc: 'Enjoy exclusive\nmember benefits.', 
+        img: giftBoxImg,
+        bgTop: 'rgba(104, 226, 3, 0.25)' // Brand Green glow
+    },
+];
 
+/**
+ * EarnRewardsSection Component
+ * Renders the promotional rewards cards layout.
+ * Supports desktop (4-column grid layout) and mobile (2-column layout) configurations.
+ * Images feature Framer Motion bounce transitions and drop shadow accents.
+ */
+export default function EarnRewardsSection() {
     return (
         <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
@@ -48,7 +58,7 @@ export default function EarnRewardsSection() {
                         
                         {/* Desktop View */}
                         <div className="hidden md:grid grid-cols-4 gap-[20px] items-stretch w-full cursor-pointer">
-                            {cards.map((c, i) => (
+                            {EARN_REWARDS_CARDS.map((c, i) => (
                                 <motion.div 
                                     key={c.title} 
                                     className="w-full h-full"
@@ -92,7 +102,7 @@ export default function EarnRewardsSection() {
 
                         {/* Mobile View */}
                         <div className="md:hidden w-full grid grid-cols-2 gap-x-12 gap-y-[65px] sm:gap-x-4 sm:gap-y-[65px] pt-[60px] pb-12 justify-items-center">
-                            {cards.map((c, i) => (
+                            {EARN_REWARDS_CARDS.map((c, i) => (
                                 <motion.div 
                                     key={c.title} 
                                     className="w-[180px] h-[130px]" 

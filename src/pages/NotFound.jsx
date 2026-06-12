@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Home, ArrowLeft, Search, Sparkles } from 'lucide-react'
+import { Home, ArrowLeft, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui'
 import { PageWrapper } from '@/components/shared/PageWrapper'
-import { fadeInUp, staggerContainer, ease } from '@/lib/animations'
+import { fadeInUp, staggerContainer } from '@/lib/animations'
 
 export default function NotFound() {
   return (

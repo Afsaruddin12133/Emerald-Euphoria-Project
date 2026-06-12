@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createBrowserRouter } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import { RootLayout } from '@/layouts/RootLayout'
@@ -9,11 +10,6 @@ const AboutPage = lazy(() => import('@/pages/About'))
 const PopupDemoPage = lazy(() => import('@/pages/PopupDemo'))
 const NotFoundPage = lazy(() => import('@/pages/NotFound'))
 
-// ─── Suspense Wrapper ──────────────────────────────────────────────────────────
-function SuspenseWrapper({ children }) {
-  return <Suspense fallback={<FullPageSpinner />}>{children}</Suspense>
-}
-
 // ─── Router Definition ─────────────────────────────────────────────────────────
 const router = createBrowserRouter([
   {
@@ -23,33 +19,33 @@ const router = createBrowserRouter([
       {
         index: true,
         element: (
-          <SuspenseWrapper>
+          <Suspense fallback={<FullPageSpinner />}>
             <HomePage />
-          </SuspenseWrapper>
+          </Suspense>
         ),
       },
       {
         path: 'about',
         element: (
-          <SuspenseWrapper>
+          <Suspense fallback={<FullPageSpinner />}>
             <AboutPage />
-          </SuspenseWrapper>
+          </Suspense>
         ),
       },
       {
         path: 'popup',
         element: (
-          <SuspenseWrapper>
+          <Suspense fallback={<FullPageSpinner />}>
             <PopupDemoPage />
-          </SuspenseWrapper>
+          </Suspense>
         ),
       },
       {
         path: '*',
         element: (
-          <SuspenseWrapper>
+          <Suspense fallback={<FullPageSpinner />}>
             <NotFoundPage />
-          </SuspenseWrapper>
+          </Suspense>
         ),
       },
     ],

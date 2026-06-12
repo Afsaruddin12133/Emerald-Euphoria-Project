@@ -5,34 +5,46 @@ import headphoneImg from '@/assets/headphone.png';
 import rewardImg from '@/assets/Reward probabiliry.png';
 import securityShieldImg from '@/assets/security shield.png';
 
-export default function ChooseUsSection() {
-    const cards = [
-        {
-            title: 'Safe & Secure',
-            desc: 'Your safety and security\ncome first.',
-            img: securityShieldImg,
-            bgTop: 'rgba(42, 94, 201, 0.4)'
-        },
-        {
-            title: '24/7 Support',
-            desc: 'Fast, friendly, and reliable\nsupport 24/7.',
-            img: headphoneImg,
-            bgTop: 'rgba(107, 33, 168, 0.4)'
-        },
-        {
-            title: 'Same day\nRedemption',
-            desc: 'Redeem your winnings\nfaster.',
-            img: cashMoneyImg,
-            bgTop: 'rgba(4, 120, 87, 0.4)'
-        },
-        {
-            title: 'VIP Club',
-            desc: 'Enjoy exclusive\nmember benefits.',
-            img: rewardImg,
-            bgTop: 'rgba(185, 28, 28, 0.4)'
-        },
-    ]
+/**
+ * Configuration array representing the "Why Choose Us" features.
+ * Extracted to the module level to optimize render performance and avoid array re-allocations on every render.
+ */
+const CHOOSE_US_CARDS = [
+    {
+        title: 'Safe & Secure',
+        desc: 'Your safety and security\ncome first.',
+        img: securityShieldImg,
+        bgTop: 'rgba(42, 94, 201, 0.4)'
+    },
+    {
+        title: '24/7 Support',
+        desc: 'Fast, friendly, and reliable\nsupport 24/7.',
+        img: headphoneImg,
+        bgTop: 'rgba(107, 33, 168, 0.4)'
+    },
+    {
+        title: 'Same day\nRedemption',
+        desc: 'Redeem your winnings\nfaster.',
+        img: cashMoneyImg,
+        bgTop: 'rgba(4, 120, 87, 0.4)'
+    },
+    {
+        title: 'VIP Club',
+        desc: 'Enjoy exclusive\nmember benefits.',
+        img: rewardImg,
+        bgTop: 'rgba(185, 28, 28, 0.4)'
+    },
+];
 
+/**
+ * ChooseUsSection Component
+ * Renders the responsive features/cards section.
+ * Handles desktop (grid) and mobile (two-column grid) views.
+ * Floating animations are applied to images using Framer Motion.
+ * Note: The "VIP Club" image uses slightly adjusted sizing (reduced by 15px)
+ * and positioning properties to ensure perfect centering and layout symmetry.
+ */
+export default function ChooseUsSection() {
     return (
         <section className="w-full relative py-12 lg:py-20">
             <div className="container-custom">
@@ -49,7 +61,7 @@ export default function ChooseUsSection() {
 
                         {/* Desktop View */}
                         <div className="hidden md:grid grid-cols-4 gap-[20px] items-stretch w-full cursor-pointer">
-                            {cards.map((c, i) => (
+                            {CHOOSE_US_CARDS.map((c, i) => (
                                 <motion.div
                                     key={c.title}
                                     className="w-full h-full"
@@ -93,7 +105,7 @@ export default function ChooseUsSection() {
 
                         {/* Mobile View */}
                         <div className="md:hidden w-full grid grid-cols-2 gap-x-12 gap-y-[50px] sm:gap-x-4 sm:gap-y-[50px] pt-[50px] pb-12 justify-items-center">
-                            {cards.map((c, i) => (
+                            {CHOOSE_US_CARDS.map((c, i) => (
                                 <motion.div
                                     key={c.title}
                                     className="w-[180px] h-[130px]"
