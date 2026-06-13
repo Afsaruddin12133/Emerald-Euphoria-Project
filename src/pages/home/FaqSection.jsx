@@ -4,24 +4,20 @@ import { useState } from 'react';
 
 const FAQS = [
     {
-        question: 'How do I deposit on Emerald Euphoria?',
-        answer: 'To deposit on Emerald Euphoria, go to your Wallet and click Top Up. Choose your preferred payment method, follow the on-screen instructions, and complete your deposit securely.'
+        question: 'Do I need a promo code to get started?',
+        answer: 'No. Our 100% First Deposit Match is available to all new players. Simply sign up, make your first deposit using any supported payment method, and your bonus credits will be added automatically.'
     },
     {
-        question: 'How do I deposit on Emerald Euphoria?',
-        answer: 'To deposit on Emerald Euphoria, go to your Wallet and click Top Up. Choose your preferred payment method, follow the on-screen instructions, and complete your deposit securely.'
+        question: 'How do I fund my wallet?',
+        answer: 'Open your Wallet, select a supported deposit method, and follow the instructions provided. Once your payment is confirmed, your credits will be added to your account.'
     },
     {
-        question: 'How do I deposit on Emerald Euphoria?',
-        answer: 'To deposit on Emerald Euphoria, go to your Wallet and click Top Up. Choose your preferred payment method, follow the on-screen instructions, and complete your deposit securely.'
+        question: 'How fast are payouts?',
+        answer: 'Most redemption requests are processed quickly, typically within 5–15 minutes. In some cases, additional verification, manual review, or payment provider delays may result in longer processing times.'
     },
     {
-        question: 'How do I deposit on Emerald Euphoria?',
-        answer: 'To deposit on Emerald Euphoria, go to your Wallet and click Top Up. Choose your preferred payment method, follow the on-screen instructions, and complete your deposit securely.'
-    },
-    {
-        question: 'How do I deposit on Emerald Euphoria?',
-        answer: 'To deposit on Emerald Euphoria, go to your Wallet and click Top Up. Choose your preferred payment method, follow the on-screen instructions, and complete your deposit securely.'
+        question: 'Is there a minimum deposit amount?',
+        answer: 'Yes. Minimum deposit requirements vary depending on the payment method selected. For Crypto deposits, the minimum deposit is $1. For Tierlock deposits, the minimum deposit is $19.99. The applicable minimum amount will be displayed before you complete your transaction.'
     }
 ];
 

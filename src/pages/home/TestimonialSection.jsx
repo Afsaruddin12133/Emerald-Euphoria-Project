@@ -1,25 +1,43 @@
 import { motion } from 'framer-motion';
 
-import man2Img from '@/assets/man.jpg';
-import man1Img from '@/assets/manimages.jpg';
+import firstPersonImg from '@/assets/first_person.PNG';
+import secondPersonImg from '@/assets/second_person.PNG';
+import thirdPersonImg from '@/assets/third_person.PNG';
+import fourthPersonImg from '@/assets/fouth_person.PNG';
+import fifthPersonImg from '@/assets/fifth_person.PNG';
+import sixPersonImg from '@/assets/six_person.PNG';
 import starImg from '@/assets/star.png';
-import womanImg from '@/assets/womanimages.jpg';
 
 const TESTIMONIALS = [
     {
-        name: 'John Doe',
-        image: man1Img,
-        text: 'Emerald Euphoria has been very easy to use. Purchase are instant, and my redeem was processed fast. Games run smooth on mobile on desktop.'
+        name: 'Brandon W.',
+        image: firstPersonImg,
+        text: '“The redemption process was simple and support answered my question quickly. That’s the kind of thing that keeps me coming back.”'
     },
     {
-        name: 'John Doe', // Assuming same placeholder name, or we can use Jane Doe
-        image: womanImg,
-        text: 'Emerald Euphoria has been very easy to use. Purchase are instant, and my redeem was processed fast. Games run smooth on mobile on desktop.'
+        name: 'Mike R.',
+        image: secondPersonImg,
+        text: '“Signed up mainly because of the First Deposit Match and honestly the process was a lot easier than I expected. Account setup took less than a couple of minutes and everything was straightforward.”'
     },
     {
-        name: 'John Doe',
-        image: man2Img,
-        text: 'Emerald Euphoria has been very easy to use. Purchase are instant, and my redeem was processed fast. Games run smooth on mobile on desktop.'
+        name: 'Sarah T.',
+        image: thirdPersonImg,
+        text: '“My first redemption was processed much faster than I thought it would be. That’s usually the thing I worry about with any new site, so it definitely gave me confidence to keep playing.”'
+    },
+    {
+        name: 'Chris D.',
+        image: fourthPersonImg,
+        text: '“I was hesitant to try a new platform, but the sign-up offer gave me a reason to test it out. Glad I did. Everything worked smoothly from registration to my first game.”'
+    },
+    {
+        name: 'Amanda K.',
+        image: fifthPersonImg,
+        text: '“What stood out to me was how simple the website is. No confusing menus, no unnecessary steps. Depositing, finding games, and checking my balance was all easy.”'
+    },
+    {
+        name: 'Emily P.',
+        image: sixPersonImg,
+        text: '“I’ve used a lot of gaming sites and this one feels very beginner-friendly. Even if you’ve never played before, it’s easy to figure out where everything is.”'
     }
 ];
 
@@ -38,22 +56,22 @@ export default function TestimonialSection() {
                 </div>
 
                 {/* Cards Grid */}
-                <div className="w-full flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-[40px] lg:gap-[30px]">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] lg:gap-[30px] justify-items-center">
                     {TESTIMONIALS.map((t, idx) => (
                         <motion.div 
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.6, delay: idx * 0.2, ease: "easeOut" }}
-                            className="w-full max-w-[414px] lg:flex-1 h-[542px] rounded-[30px] p-[25px] flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                            transition={{ duration: 0.6, delay: (idx % 3) * 0.2, ease: "easeOut" }}
+                            className="w-full max-w-[414px] h-[542px] rounded-[30px] p-[25px] flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                             style={{ 
                                 background: 'var(--Shade-02, #051711)', 
                                 border: '1px solid var(--Shade-03, #0F211B)' 
                             }}
                         >
                             {/* Image Container */}
-                            <div className="w-full flex-1 min-h-[260px] rounded-[20px] overflow-hidden mb-[25px] relative">
+                            <div className="w-full h-[240px] shrink-0 rounded-[20px] overflow-hidden mb-[25px] relative">
                                 <img 
                                     src={t.image} 
                                     alt={t.name} 
@@ -81,7 +99,7 @@ export default function TestimonialSection() {
                             {/* Text Content */}
                             <h4 className="text-white font-['Montserrat'] font-bold text-[16px] mb-[12px] leading-[100%]" style={{ letterSpacing: '0' }}>{t.name}</h4>
                             
-                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[16px] leading-[110%]" style={{ letterSpacing: '0' }}>
+                            <p className="text-[#556761] font-['Montserrat'] font-bold text-[14px] leading-[140%] flex-1 overflow-hidden" style={{ letterSpacing: '0' }}>
                                 {t.text}
                             </p>
                             

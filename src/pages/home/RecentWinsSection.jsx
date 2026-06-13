@@ -5,20 +5,69 @@ import coinImg from '@/assets/coin.png';
 import juwaImg from '@/assets/juwa.png';
 import luckyImg from '@/assets/lucky.png';
 import ultraPandaImg from '@/assets/ultra panda.png';
+import fireKirinImg from '@/assets/firekirin.png';
+import orionStarsImg from '@/assets/orionstrars.png';
+import gameVaultImg from '@/assets/game vault.png';
+import milkyWayImg from '@/assets/milkyways.png';
+import goldenDragonImg from '@/assets/goldendragron.png';
+import riverSweepsImg from '@/assets/riversweeps.png';
+
+const vblinkImg = luckyImg;
+const blueDragonImg = goldenDragonImg;
+const vegasXImg = magicCityImg;
+const yoloImg = ultraPandaImg;
 
 const RECENT_WINS_DATA = [
-    { id: 1, image: magicCityImg, user: '@bitwin', amount: '999.0' },
-    { id: 2, image: luckyImg, user: '@bitwin', amount: '999.0' },
-    { id: 3, image: juwaImg, user: '@bitwin', amount: '999.0' },
-    { id: 4, image: luckyImg, user: '@bitwin', amount: '999.0' },
-    { id: 5, image: magicCityImg, user: '@bitwin', amount: '999.0' },
-    { id: 6, image: juwaImg, user: '@bitwin', amount: '999.0' },
-    { id: 7, image: ultraPandaImg, user: '@bitwin', amount: '999.0' },
-    { id: 8, image: magicCityImg, user: '@bitwin', amount: '999.0' },
-    { id: 9, image: juwaImg, user: '@bitwin', amount: '999.0' },
-    { id: 10, image: ultraPandaImg, user: '@bitwin', amount: '999.0' },
-    { id: 11, image: magicCityImg, user: '@bitwin', amount: '999.0' },
-    { id: 12, image: luckyImg, user: '@bitwin', amount: '999.0' },
+    { id: 1, image: juwaImg, user: '@LuckyMike87', amount: '$187' },
+    { id: 2, image: fireKirinImg, user: '@SpinQueen22', amount: '$942' },
+    { id: 3, image: orionStarsImg, user: '@BigWinDave', amount: '$356' },
+    { id: 4, image: gameVaultImg, user: '@JackpotAsh', amount: '$784' },
+    { id: 5, image: milkyWayImg, user: '@MoonCash99', amount: '$521' },
+    { id: 6, image: vblinkImg, user: '@VegasAce11', amount: '$963' },
+    { id: 7, image: juwaImg, user: '@FastCoins77', amount: '$248' },
+    { id: 8, image: fireKirinImg, user: '@PandaLuck55', amount: '$675' },
+    { id: 9, image: orionStarsImg, user: '@OrionKing88', amount: '$892' },
+    { id: 10, image: gameVaultImg, user: '@GoldRush24', amount: '$319' },
+    { id: 11, image: milkyWayImg, user: '@StarPlayer66', amount: '$997' },
+    { id: 12, image: vblinkImg, user: '@LuckyCharm9', amount: '$451' },
+    { id: 13, image: juwaImg, user: '@CashHunter13', amount: '$734' },
+    { id: 14, image: fireKirinImg, user: '@FireSpin88', amount: '$168' },
+    { id: 15, image: orionStarsImg, user: '@MegaJackpot7', amount: '$581' },
+    { id: 16, image: gameVaultImg, user: '@VaultMaster1', amount: '$928' },
+    { id: 17, image: milkyWayImg, user: '@GalaxyWins2', amount: '$263' },
+    { id: 18, image: vblinkImg, user: '@VBChampion8', amount: '$845' },
+    { id: 19, image: juwaImg, user: '@WildReels17', amount: '$492' },
+    { id: 20, image: fireKirinImg, user: '@KirinBoss99', amount: '$999' },
+    { id: 21, image: orionStarsImg, user: '@SpinDoctor5', amount: '$227' },
+    { id: 22, image: gameVaultImg, user: '@LuckyVault44', amount: '$651' },
+    { id: 23, image: milkyWayImg, user: '@CosmicCash18', amount: '$783' },
+    { id: 24, image: vblinkImg, user: '@TurboWins3', amount: '$395' },
+    { id: 25, image: juwaImg, user: '@ReelKing77', amount: '$914' },
+    { id: 26, image: fireKirinImg, user: '@DragonFire9', amount: '$287' },
+    { id: 27, image: orionStarsImg, user: '@OrionLegend', amount: '$736' },
+    { id: 28, image: gameVaultImg, user: '@CashVault21', amount: '$557' },
+    { id: 29, image: milkyWayImg, user: '@MilkyJackpot', amount: '$178' },
+    { id: 30, image: vblinkImg, user: '@BlinkWinner7', amount: '$881' },
+    { id: 31, image: juwaImg, user: '@JuwaHero88', amount: '$624' },
+    { id: 32, image: fireKirinImg, user: '@FireTiger11', amount: '$342' },
+    { id: 33, image: orionStarsImg, user: '@StarCrusher4', amount: '$953' },
+    { id: 34, image: gameVaultImg, user: '@GoldenVault5', amount: '$469' },
+    { id: 35, image: milkyWayImg, user: '@LunarPlayer8', amount: '$816' },
+    { id: 36, image: vblinkImg, user: '@VBMoney99', amount: '$214' },
+    { id: 37, image: juwaImg, user: '@LuckyReels24', amount: '$771' },
+    { id: 38, image: fireKirinImg, user: '@KirinPower77', amount: '$589' },
+    { id: 39, image: orionStarsImg, user: '@OrionMasterX', amount: '$998' },
+    { id: 40, image: gameVaultImg, user: '@VaultKing33', amount: '$301' },
+    { id: 41, image: milkyWayImg, user: '@SpaceWinner1', amount: '$694' },
+    { id: 42, image: vblinkImg, user: '@BlinkCash22', amount: '$873' },
+    { id: 43, image: blueDragonImg, user: '@BlueAce88', amount: '$255' },
+    { id: 44, image: vegasXImg, user: '@VegasPlayer7', amount: '$618' },
+    { id: 45, image: luckyImg, user: '@SweepKing44', amount: '$945' },
+    { id: 46, image: goldenDragonImg, user: '@GoldDragon9', amount: '$386' },
+    { id: 47, image: magicCityImg, user: '@MagicWinner1', amount: '$727' },
+    { id: 48, image: yoloImg, user: '@YOLOJackpot7', amount: '$167' },
+    { id: 49, image: riverSweepsImg, user: '@RiverBoss88', amount: '$852' },
+    { id: 50, image: juwaImg, user: '@JuwaNextGen', amount: '$538' },
 ];
 
 function RecentWinsMarquee() {
