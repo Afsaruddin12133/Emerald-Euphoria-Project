@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
 import firstPersonImg from '@/assets/first_person.PNG';
@@ -44,20 +44,37 @@ const TESTIMONIALS = [
 
 export default function TestimonialSection() {
     const [width, setWidth] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [visibleCards, setVisibleCards] = useState(3);
     const carousel = useRef();
+    const x = useMotionValue(0);
 
     useEffect(() => {
-        const updateWidth = () => {
+        const updateLayout = () => {
             if (carousel.current) {
                 setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
             }
+            if (window.innerWidth < 768) setVisibleCards(1);
+            else if (window.innerWidth < 1024) setVisibleCards(2);
+            else setVisibleCards(3);
         };
-        updateWidth();
-        window.addEventListener('resize', updateWidth);
+        updateLayout();
+        window.addEventListener('resize', updateLayout);
         // Add a slight delay to ensure images/fonts load before calculating width
-        setTimeout(updateWidth, 500);
-        return () => window.removeEventListener('resize', updateWidth);
+        setTimeout(updateLayout, 500);
+        return () => window.removeEventListener('resize', updateLayout);
     }, []);
+
+    useEffect(() => {
+        return x.on('change', (latestX) => {
+            if (width > 0) {
+                const progress = Math.min(1, Math.max(0, -latestX / width));
+                const maxScrollIndex = TESTIMONIALS.length - visibleCards;
+                const currentIndex = Math.round(progress * maxScrollIndex);
+                setActiveIndex(currentIndex);
+            }
+        });
+    }, [x, width, visibleCards]);
 
     return (
         <section className="w-full py-12 lg:py-20 relative z-20 overflow-hidden">
@@ -75,6 +92,7 @@ export default function TestimonialSection() {
                 {/* Cards Carousel */}
                 <div ref={carousel} className="w-full overflow-hidden cursor-grab active:cursor-grabbing pb-10">
                     <motion.div 
+                        style={{ x }}
                         drag="x"
                         dragConstraints={{ right: 0, left: -width }}
                         className="flex gap-[20px] md:gap-[30px]"
@@ -124,6 +142,23 @@ export default function TestimonialSection() {
                             </motion.div>
                         ))}
                     </motion.div>
+                </div>
+
+                {/* Pagination Dots */}
+                <div className="flex justify-center items-center gap-[8px] mt-[10px]">
+                    {TESTIMONIALS.map((_, idx) => {
+                        const isActive = idx >= activeIndex && idx < activeIndex + visibleCards;
+                        return (
+                            <div 
+                                key={idx}
+                                className={`h-[8px] rounded-full transition-all duration-300 ease-out ${
+                                    isActive 
+                                        ? 'w-[32px] bg-gradient-to-r from-[#68E203] to-[#55B802] shadow-[0_0_10px_rgba(104,226,3,0.4)]' 
+                                        : 'w-[8px] bg-[#1a332a]'
+                                }`}
+                            />
+                        );
+                    })}
                 </div>
 
             </div>
